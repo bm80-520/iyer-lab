@@ -1,0 +1,16 @@
+{
+  "name": "iyer-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "typecheck": "next typegen --webpack && tsc --noEmit",
+    "preview": "node scripts/preview.mjs",
+    "check:export": "node scripts/check-export.mjs",
+    "migrate:wordpress": "node scripts/migrate-wordpress.mjs"
+  },
+  "engines": { "node": ">=20.9.0" },
+  "dependencies": { "next": "^16.0.0", "react": "^19.2.0", "react-dom": "^19.2.0" },
+  "devDependencies": { "@types/node": "^22.0.0", "@types/react": "^19.2.0", "@types/react-dom": "^19.2.0", "cheerio": "^1.1.2", "typescript": "^5.9.0" }
+}
