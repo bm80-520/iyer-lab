@@ -1,5 +1,11 @@
 import Link from 'next/link';
+import { pages } from '@/lib/content';
+import { withBasePath } from '@/lib/site';
 
 export default function NotFound() {
-  return <div className="page-shell"><p className="eyebrow">404</p><h1>Page not found</h1><p>Let’s get you back to the lab.</p><Link className="button" href="/">Return home →</Link></div>;
+  const home = pages.find(page => page.slug === '')!;
+  return <>
+    {home.styles.map(href => <link key={href} rel="stylesheet" href={withBasePath(href)} precedence="original" />)}
+    <main id="main" className="main_color"><div className="container"><h1>404</h1><Link href="/">Home</Link></div></main>
+  </>;
 }

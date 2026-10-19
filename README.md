@@ -2,8 +2,11 @@
 
 A Next.js App Router site for the Iyer Laboratory at Rice University. Pages are
 exported as static HTML, so GitHub Pages can host the entire site without a server.
-The existing research, team, publications, resources, recruitment, and news content
-has been migrated from the downloaded WordPress site.
+The presentation is restored from the original WordPress snapshot on `main`:
+page layouts, wording, colors, typography, responsive banners, research images,
+galleries, news cards, and Rice University footer branding. Next.js generates
+static routes; the original presentation scripts run locally for the slideshow,
+menus, galleries, tabs, accordions, and lightbox.
 
 ## Run locally
 
@@ -20,6 +23,7 @@ Open <http://localhost:3000>. To check the production export:
 npm run typecheck
 npm run build
 npm run check:export
+npm run check:original
 npm run preview
 ```
 
@@ -30,65 +34,44 @@ already using port 3000.
 ## File structure
 
 ```text
-src/
-  app/
-    layout.tsx            Shared page layout and metadata
-    page.tsx              Home page
-    globals.css           Responsive site styles
-    not-found.tsx         Custom 404 page
-    [...slug]/page.tsx    Static routes for entries in content/pages.json
-  components/             Shared header and news list
-  lib/                    Content loading and navigation configuration
-content/
-  pages.json              Page titles, URLs, content filenames, and news dates
-  pages/                  Editable HTML content, one file per page
-public/
-  images/                 Migrated images and downloadable files, grouped by date
-  .nojekyll               Allows GitHub Pages to serve Next.js assets
-scripts/
-  check-export.mjs        Checks exported internal links and asset references
-  preview.mjs             Local static export preview
-  migrate-wordpress.mjs   One-time migration from the original snapshot
-.github/workflows/
-  deploy.yml              Build checks and GitHub Pages deployment
-archive/                  Original WordPress download; excluded from deployment
-next.config.ts            Static export and hosting path configuration
+src/app/                 Next.js routes, metadata, and document shell
+src/components/          Original page renderer and presentation initialization
+src/lib/                 Content loading and deployment base-path handling
+content/pages.json       Original page titles, routes, classes, and stylesheets
+content/pages/           Original page markup, including home.html
+public/original/         Original styles, fonts, images, and presentation scripts
+scripts/                 Migration, export validation, and local preview
+archive/                 Unmodified original snapshot; excluded from deployment
 ```
 
 ## Edit content
 
-- Change home page text and sections in `src/app/page.tsx`.
-- Edit existing page HTML in `content/pages/`. Keep semantic headings, paragraphs,
-  lists, and links; no WordPress plugins or scripts are needed.
-- Add a page by creating an HTML file and adding an entry to `content/pages.json`:
+Edit the checked-in HTML in `content/pages/`. The pages retain the source site's
+layout classes and visible wording; shared navigation/footer markup appears in
+each page. `content/pages.json` maps routes to these files and their original
+stylesheets. Local URLs use `__SITE_BASE_PATH__`, replaced during export so both
+root hosting and GitHub Pages project URLs work. CSS assets use relative URLs.
 
-  ```json
-  {
-    "slug": "research/new-project",
-    "title": "New project",
-    "file": "research--new-project.html",
-    "kind": "page"
-  }
-  ```
+`public/original/` contains the original Rice University logos and campus photo,
+lab banners, research illustrations, slideshow images, and team photographs.
+The older `public/images/` directory is retained for compatibility with prior
+migration URLs. No AI-generated imagery or replacement marketing copy is used.
 
-- For a news article, use `"kind": "news"` and add a `"date": "2026-10-09"` field.
-  News lists update automatically, newest first.
-- Put images or PDFs in `public/images/` and reference them as
-  `/images/your-file.jpg`. Use meaningful `alt` text on images. Internal page links
-  use `/research/primer/`, for example. The content loader adds the deployment
-  base path to these URLs during the build.
-- Change the navigation in `src/lib/site.ts`, and styles in `src/app/globals.css`.
+`npm run migrate:wordpress` deliberately regenerates content and presentation
+assets from `archive/`, overwriting manual edits to imported pages. The migration
+preserves layout markup and styling, normalizes local links and asset URLs,
+decodes obfuscated email links, and bundles the original local presentation
+scripts. Only reviewed repository HTML should be imported.
 
-HTML files are trusted, reviewed repository content. Do not insert untrusted HTML.
-The migration command overwrites migrated content; run it only when deliberately
-re-importing the archived snapshot. The original archive is retained for reference
-and is not needed for normal builds or edits.
-
-The password-protected internal resources were not present in the download; that
-page provides a contact link. Research links to pages absent from the snapshot
-continue to point to the original website. Image galleries and WordPress widgets
-have been replaced by static content; research illustrations and team photos are
-retained.
+The internal resources page preserves the original password form. It submits to
+the existing site's WordPress authentication endpoint; static hosting does not
+provide password authentication or contain the protected content. Destinations
+absent from the snapshot remain links to the original website. Site links use
+full document navigation so presentation scripts initialize once per page.
+The news “Load more” control opens the live news archive because older entries
+are absent from the snapshot. `npm run check:original` compares all imported
+pages against the archive for unchanged wording, navigation, layout elements,
+and Rice branding.
 
 ## Deploy on GitHub Pages
 

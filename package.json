@@ -8,6 +8,7 @@
     "typecheck": "next typegen --webpack && tsc --noEmit",
     "preview": "node scripts/preview.mjs",
     "check:export": "node scripts/check-export.mjs",
+    "check:original": "node scripts/check-original.mjs",
     "migrate:wordpress": "node scripts/migrate-wordpress.mjs"
   },
   "engines": { "node": ">=20.9.0" },

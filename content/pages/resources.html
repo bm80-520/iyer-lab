@@ -1,174 +1,598 @@
-<div class="content-column"></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/Science-communication-1-845x684.jpeg" alt="business communication" loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="sci-comm"><h2>Science Communication</h2><div><div></div></div></div>
-<section><div>
+<style>
+
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+
+
+
+    img.wp-smiley, img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+/*# sourceURL=wp-emoji-styles-inline-css */
+
+
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+
+
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--metallic-red: #b02b2c;--wp--preset--color--maximum-yellow-red: #edae44;--wp--preset--color--yellow-sun: #eeee22;--wp--preset--color--palm-leaf: #83a846;--wp--preset--color--aero: #7bb0e7;--wp--preset--color--old-lavender: #745f7e;--wp--preset--color--steel-teal: #5f8789;--wp--preset--color--raspberry-pink: #d65799;--wp--preset--color--medium-turquoise: #4ecac2;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 1rem;--wp--preset--font-size--medium: 1.125rem;--wp--preset--font-size--large: 1.75rem;--wp--preset--font-size--x-large: clamp(1.75rem, 3vw, 2.25rem);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1130px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-metallic-red-color{color: var(--wp--preset--color--metallic-red) !important;}.has-maximum-yellow-red-color{color: var(--wp--preset--color--maximum-yellow-red) !important;}.has-yellow-sun-color{color: var(--wp--preset--color--yellow-sun) !important;}.has-palm-leaf-color{color: var(--wp--preset--color--palm-leaf) !important;}.has-aero-color{color: var(--wp--preset--color--aero) !important;}.has-old-lavender-color{color: var(--wp--preset--color--old-lavender) !important;}.has-steel-teal-color{color: var(--wp--preset--color--steel-teal) !important;}.has-raspberry-pink-color{color: var(--wp--preset--color--raspberry-pink) !important;}.has-medium-turquoise-color{color: var(--wp--preset--color--medium-turquoise) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-metallic-red-background-color{background-color: var(--wp--preset--color--metallic-red) !important;}.has-maximum-yellow-red-background-color{background-color: var(--wp--preset--color--maximum-yellow-red) !important;}.has-yellow-sun-background-color{background-color: var(--wp--preset--color--yellow-sun) !important;}.has-palm-leaf-background-color{background-color: var(--wp--preset--color--palm-leaf) !important;}.has-aero-background-color{background-color: var(--wp--preset--color--aero) !important;}.has-old-lavender-background-color{background-color: var(--wp--preset--color--old-lavender) !important;}.has-steel-teal-background-color{background-color: var(--wp--preset--color--steel-teal) !important;}.has-raspberry-pink-background-color{background-color: var(--wp--preset--color--raspberry-pink) !important;}.has-medium-turquoise-background-color{background-color: var(--wp--preset--color--medium-turquoise) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-metallic-red-border-color{border-color: var(--wp--preset--color--metallic-red) !important;}.has-maximum-yellow-red-border-color{border-color: var(--wp--preset--color--maximum-yellow-red) !important;}.has-yellow-sun-border-color{border-color: var(--wp--preset--color--yellow-sun) !important;}.has-palm-leaf-border-color{border-color: var(--wp--preset--color--palm-leaf) !important;}.has-aero-border-color{border-color: var(--wp--preset--color--aero) !important;}.has-old-lavender-border-color{border-color: var(--wp--preset--color--old-lavender) !important;}.has-steel-teal-border-color{border-color: var(--wp--preset--color--steel-teal) !important;}.has-raspberry-pink-border-color{border-color: var(--wp--preset--color--raspberry-pink) !important;}.has-medium-turquoise-border-color{border-color: var(--wp--preset--color--medium-turquoise) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+
+.__eae_cssd, .RO937FT__umbs93W__lnJO {unicode-bidi: bidi-override;direction: rtl;}
+
+/* logo spacing */
+.logo {padding-top: 20px;}
+
+/*scrolling text block */
+div.avia_textblock.scrolling-text {
+height: 1200px;
+overflow: hidden;
+overflow-y: visible;
+}
+/* fix image link hover */
+
+/* CSS to increase line-height in layerslider */
+html * div .avia-layerslider .ls-wp-container .ls-layer > *, body * div .avia-layerslider .ls-wp-container .ls-layer > *, #ls-global * div .avia-layerslider .ls-wp-container .ls-layer > * {
+    line-height: 1.4em !important;
+}
+/* column settings for people-stacked and research listing */
+.profile-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+}
+/* hide/show banner depending on screen size */
+@media only screen and (max-width: 867px) {
+.large-banner {
+display: none;}
+div#header_main {
+background-color: #ffffff;
+}}
+@media only screen and (min-width: 868px) {
+.small-banner {
+display: none;}}
+
+/* hide meta data */
+.blog-categories {
+display: none;}
+.text-sep {
+display: none;}
+.blog-author {
+display: none;}
+.blog-meta{
+display: none;}
+@media only screen and (min-width: 800px) {
+
+/* underline links site-wide */
+a {     text-decoration: underline;  }
+/* hides meta data */
+.av-masonry-datex {
+    display: none!important;
+}
+.post_author_timeline {
+    display: none;
+}
+
+/* hides sidebar on all pages with sidebar set to "right" - we do this bc setting NO sidebar causes page content to be centered... */
+.container .av-content-small.units {
+    width: 100%;
+}
+#top #main .sidebar
+ { display: none;}
+main {
+    border-color: #ffffff!important;
+}
+
+/* CSS for enfold TABs */
+/* stops the tabs from glowing in chrome */
+.tabcontainer .tab {
+    outline: none;
+}
+/* tab section heading*/
+.tab_titles {
+    font-size: 24px;
+    font-family: merriweather;
+}
+#top .main_color .tabcontainer .tab.active_tab  {
+    color: #002569;
+}
+.main_color .tabcontainer .tab.hover {
+    color: #002569;
+}
+.main_color .tabcontainer .tab {
+    color: #002569;
+}
+    */
+.av-masonry-entry-title.entry-title {
+    font-size: 24px;
+    text-align: none;
+    text-transform: none;
+}
+.avia-caption-content {
+    font-size: 50px;
+     width: 1000px;
+    text-align: center;
+    text-transform: none;
+}
+
+.js_active .av-tab-section-tab-title-container {
+    display: flex!important;
+    justify-content: space-around;
+}
+}
+/* adds bg to google scholar */
+#top #wrap_all .av-social-link-google_scholar:hover a{
+    color:#fff;
+    background-color:#EA4435;
+}
+/* Button CSS */
+.buttons{
+    text-decoration: none;
+    background-color: #A51C30!important;
+    color: #ffffff!important;
+    border: 1px solid  #A51C30!important;
+    margin: 15px 5px 5px 5px!important;
+    padding: 2px 10px 2px 10px!important;
+    border-radius: 25px!important;
+    display: inline-flex!important;
+}
+.buttons:hover {
+    text-decoration: none!important;
+    color: #e1e1e1!important;
+}
+/*rounded corners on images*/
+img {
+border-radius: 30!important;
+}
+
+/*fix for layerslider line-height issue*/
+h1.ls-layer div.char {line-height: 1.5 !important; }
+
+
+        @font-face {font-family: 'entypo-fontello-enfold'; font-weight: normal; font-style: normal; font-display: auto;
+        src: url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.woff2") format('woff2'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.woff") format('woff'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.ttf") format('truetype'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.svg#entypo-fontello-enfold") format('svg'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold.eot"),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello-enfold/entypo-fontello-enfold%EF%B9%96.eot#iefix") format('embedded-opentype');
+        }
+
+        #top .avia-font-entypo-fontello-enfold, body .avia-font-entypo-fontello-enfold, html body [data-av_iconfont='entypo-fontello-enfold']:before{ font-family: 'entypo-fontello-enfold'; }
+
+        @font-face {font-family: 'entypo-fontello'; font-weight: normal; font-style: normal; font-display: auto;
+        src: url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello.woff2") format('woff2'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello.woff") format('woff'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello.ttf") format('truetype'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello.svg#entypo-fontello") format('svg'),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello.eot"),
+        url("__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/themes/enfold/config-templatebuilder/avia-template-builder/assets/fonts/entypo-fontello/entypo-fontello%EF%B9%96.eot#iefix") format('embedded-opentype');
+        }
+
+        #top .avia-font-entypo-fontello, body .avia-font-entypo-fontello, html body [data-av_iconfont='entypo-fontello']:before{ font-family: 'entypo-fontello'; }
+        </style>
+
+
+
+<header id="header" class="all_colors header_color light_bg_color  av_header_top av_logo_right av_main_nav_header av_menu_left av_slim av_header_sticky av_header_shrinking_disabled av_header_stretch_disabled av_mobile_menu_phone av_header_searchicon_disabled av_header_unstick_top_disabled av_bottom_nav_disabled  av_header_border_disabled" data-av_shrink_factor="50" role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+
+        <div id="header_main" class="container_wrap container_wrap_logo">
+
+        <div class="container av-logo-container"><div class="inner-container"><span class="logo avia-standard-logo"><a href="__SITE_BASE_PATH__/" class="" aria-label="clear" title="clear"><img src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2018/09/clear.png" height="100" width="300" alt="Iyer Lab" title="clear"></a></span><nav class="main_menu" data-selectname="Select a page" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement"><div class="avia-menu av-main-nav-wrap"><ul role="menu" class="menu av-main-nav" id="avia-menu"><li role="menuitem" id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-top-level menu-item-top-level-1"><a href="__SITE_BASE_PATH__/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Home</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-2"><a href="__SITE_BASE_PATH__/research/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Research</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-46" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-3"><a href="__SITE_BASE_PATH__/publications/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Publications</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-4"><a href="__SITE_BASE_PATH__/team/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Team</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-1385" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-1363 current_page_item menu-item-top-level menu-item-top-level-5 current-menu-item"><a href="#top" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Resources</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-2592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-6"><a href="__SITE_BASE_PATH__/lab-news/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Lab News</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-7"><a href="__SITE_BASE_PATH__/join-our-shoal/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Join our shoal!</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li class="av-burger-menu-main menu-item-avia-special" role="menuitem">
+                        <a href="#" aria-label="Menu" aria-hidden="false">
+                            <span class="av-hamburger av-hamburger--spin av-js-hamburger">
+                                <span class="av-hamburger-box">
+                                  <span class="av-hamburger-inner"></span>
+                                  <strong>Menu</strong>
+                                </span>
+                            </span>
+                            <span class="avia_hidden_link_text">Menu</span>
+                        </a>
+                       </li></ul></div></nav></div> </div>
+        <!-- end container_wrap-->
+        </div>
+<div class="header_bg"></div>
+<!-- end header -->
+</header>
+
+    <div id="main" class="all_colors" data-scroll-offset="88">
+
+    <img class="large-banner" style="width: 100%; vertical-align: bottom;" alt="banner" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Iyer_lab-3-1.svg"><img class="small-banner" style="width: 100%; vertical-align: bottom;" alt="banner" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Iyer_lab_400x310-3-1.svg"><div class="main_color container_wrap_first container_wrap fullsize"><div class="container av-section-cont-open"><main role="main" itemprop="mainContentOfPage" class="template-page content  av-content-full alpha units"><div class="post-entry post-entry-type-page post-entry-1363"><div class="entry-content-wrapper clearfix"><div class="flex_column av-2auxb7-9394ec6ae41f2405ce440319daf7fc8e av_one_full  avia-builder-el-0  el_before_av_two_fifth  avia-builder-el-first  first flex_column_div"><div class="av-horizontal-gallery av-lsxla9z9-316a9349b83f03e362ab1a79578de1cf av-horizontal-gallery-no-gap av-horizontal-gallery-enlarge-effect avia-builder-el-1 avia-builder-el-no-sibling av-slideshow-ui av-control-default av-no-slider-navigation av-slideshow-manual av-loop-once av-loop-manual-once av-horizontal-gallery-1 av-horizontal-gallery-animated" data-slideshow-data="{&quot;enlarge&quot;:1.3000000000000000444089209850062616169452667236328125,&quot;animation&quot;:&quot;slide&quot;,&quot;autoplay&quot;:false,&quot;loop_autoplay&quot;:&quot;once&quot;,&quot;interval&quot;:5,&quot;loop_manual&quot;:&quot;manual-once&quot;,&quot;autoplay_stopper&quot;:false,&quot;noNavigation&quot;:false,&quot;bg_slider&quot;:false,&quot;keep_padding&quot;:&quot;&quot;,&quot;hoverpause&quot;:false,&quot;show_slide_delay&quot;:0}" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-slideshow-arrows avia-slideshow-controls av-visible-prev av-visible-next"><a href="#prev" class="prev-slide av-horizontal-gallery-prev avia-svg-icon avia-font-svg_entypo-fontello" data-av_svg_icon="left-open-big" data-av_iconset="svg_entypo-fontello" tabindex="-1" title="Previous"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="32" viewBox="0 0 15 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-1" aria-describedby="av-svg-desc-1" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-1">Previous</title>
+<desc id="av-svg-desc-1">Previous</desc>
+<path d="M14.464 27.84q0.832 0.832 0 1.536-0.832 0.832-1.536 0l-12.544-12.608q-0.768-0.768 0-1.6l12.544-12.608q0.704-0.832 1.536 0 0.832 0.704 0 1.536l-11.456 11.904z"></path>
+</svg><span class="avia_hidden_link_text">Previous</span></a><a href="#next" class="next-slide av-horizontal-gallery-next avia-svg-icon avia-font-svg_entypo-fontello" data-av_svg_icon="right-open-big" data-av_iconset="svg_entypo-fontello" tabindex="-1" title="Next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="15" height="32" viewBox="0 0 15 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-2" aria-describedby="av-svg-desc-2" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-2">Next</title>
+<desc id="av-svg-desc-2">Next</desc>
+<path d="M0.416 27.84l11.456-11.84-11.456-11.904q-0.832-0.832 0-1.536 0.832-0.832 1.536 0l12.544 12.608q0.768 0.832 0 1.6l-12.544 12.608q-0.704 0.832-1.536 0-0.832-0.704 0-1.536z"></path>
+</svg><span class="avia_hidden_link_text">Next</span></a></div><div class="av-horizontal-gallery-inner" data-av-height="15" style="padding: 0px; height: 181.5px;"><div class="av-horizontal-gallery-slider" style="min-width: 1452px;"><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2058 avia-img-lazy-loading-not-2058 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-180x180.png" title="Image5" alt="Image5" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-300x300.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-768x768.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-36x36.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image5.png" data-srcset="../wp-content/uploads/2024/03/Image5.png 988w, ../wp-content/uploads/2024/03/Image5-300x300.png 300w, ../wp-content/uploads/2024/03/Image5-80x80.png 80w, ../wp-content/uploads/2024/03/Image5-768x768.png 768w, ../wp-content/uploads/2024/03/Image5-36x36.png 36w, ../wp-content/uploads/2024/03/Image5-180x180.png 180w, ../wp-content/uploads/2024/03/Image5-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image5" alt="Image5" aria-label="Open image in lightbox: Image5"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-3" aria-describedby="av-svg-desc-3" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-3">Open image in lightbox: Image5</title>
+<desc id="av-svg-desc-3">Open image in lightbox: Image5</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2059 avia-img-lazy-loading-not-2059 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image24-180x180.png" title="Image24" alt="Image24" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image24-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image24-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image24-36x36.png 36w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image24.png" data-srcset="../wp-content/uploads/2024/03/Image24.png 538w, ../wp-content/uploads/2024/03/Image24-163x300.png 163w, ../wp-content/uploads/2024/03/Image24-384x705.png 384w" data-sizes="(max-width: 538px) 100vw, 538px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image24" alt="Image24" aria-label="Open image in lightbox: Image24"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-4" aria-describedby="av-svg-desc-4" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-4">Open image in lightbox: Image24</title>
+<desc id="av-svg-desc-4">Open image in lightbox: Image24</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2060 avia-img-lazy-loading-not-2060 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image25-180x180.png" title="Image25" alt="Image25" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image25-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image25-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image25-36x36.png 36w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image25.png" data-srcset="../wp-content/uploads/2024/03/Image25.png 538w, ../wp-content/uploads/2024/03/Image25-163x300.png 163w, ../wp-content/uploads/2024/03/Image25-384x705.png 384w" data-sizes="(max-width: 538px) 100vw, 538px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image25" alt="Image25" aria-label="Open image in lightbox: Image25"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-5" aria-describedby="av-svg-desc-5" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-5">Open image in lightbox: Image25</title>
+<desc id="av-svg-desc-5">Open image in lightbox: Image25</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2061 avia-img-lazy-loading-not-2061 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-180x180.png" title="Image33" alt="Image33" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-300x300.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-768x768.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-36x36.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image33.png" data-srcset="../wp-content/uploads/2024/03/Image33.png 988w, ../wp-content/uploads/2024/03/Image33-300x300.png 300w, ../wp-content/uploads/2024/03/Image33-80x80.png 80w, ../wp-content/uploads/2024/03/Image33-768x768.png 768w, ../wp-content/uploads/2024/03/Image33-36x36.png 36w, ../wp-content/uploads/2024/03/Image33-180x180.png 180w, ../wp-content/uploads/2024/03/Image33-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image33" alt="Image33" aria-label="Open image in lightbox: Image33"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-6" aria-describedby="av-svg-desc-6" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-6">Open image in lightbox: Image33</title>
+<desc id="av-svg-desc-6">Open image in lightbox: Image33</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2062 avia-img-lazy-loading-not-2062 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-180x180.png" title="Image36" alt="Image36" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-300x300.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-768x768.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-36x36.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image36.png" data-srcset="../wp-content/uploads/2024/03/Image36.png 988w, ../wp-content/uploads/2024/03/Image36-300x300.png 300w, ../wp-content/uploads/2024/03/Image36-80x80.png 80w, ../wp-content/uploads/2024/03/Image36-768x768.png 768w, ../wp-content/uploads/2024/03/Image36-36x36.png 36w, ../wp-content/uploads/2024/03/Image36-180x180.png 180w, ../wp-content/uploads/2024/03/Image36-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image36" alt="Image36" aria-label="Open image in lightbox: Image36"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-7" aria-describedby="av-svg-desc-7" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-7">Open image in lightbox: Image36</title>
+<desc id="av-svg-desc-7">Open image in lightbox: Image36</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2063 avia-img-lazy-loading-not-2063 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-180x180.png" title="Image37" alt="Image37" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-300x300.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-768x768.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-36x36.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image37.png" data-srcset="../wp-content/uploads/2024/03/Image37.png 988w, ../wp-content/uploads/2024/03/Image37-300x300.png 300w, ../wp-content/uploads/2024/03/Image37-80x80.png 80w, ../wp-content/uploads/2024/03/Image37-768x768.png 768w, ../wp-content/uploads/2024/03/Image37-36x36.png 36w, ../wp-content/uploads/2024/03/Image37-180x180.png 180w, ../wp-content/uploads/2024/03/Image37-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image37" alt="Image37" aria-label="Open image in lightbox: Image37"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-8" aria-describedby="av-svg-desc-8" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-8">Open image in lightbox: Image37</title>
+<desc id="av-svg-desc-8">Open image in lightbox: Image37</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2064 avia-img-lazy-loading-not-2064 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-180x180.png" title="Image38" alt="Image38" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-180x180.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-300x300.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-80x80.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-768x768.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-36x36.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image38.png" data-srcset="../wp-content/uploads/2024/03/Image38.png 988w, ../wp-content/uploads/2024/03/Image38-300x300.png 300w, ../wp-content/uploads/2024/03/Image38-80x80.png 80w, ../wp-content/uploads/2024/03/Image38-768x768.png 768w, ../wp-content/uploads/2024/03/Image38-36x36.png 36w, ../wp-content/uploads/2024/03/Image38-180x180.png 180w, ../wp-content/uploads/2024/03/Image38-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image38" alt="Image38" aria-label="Open image in lightbox: Image38"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-9" aria-describedby="av-svg-desc-9" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-9">Open image in lightbox: Image38</title>
+<desc id="av-svg-desc-9">Open image in lightbox: Image38</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div><div class="av-horizontal-gallery-wrap noHover"><img decoding="async" fetchpriority="high" class="wp-image-2065 avia-img-lazy-loading-not-2065 av-horizontal-gallery-img" width="180" height="180" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png" title="Image39" alt="Image39" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 180w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 80w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 36w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png 988w" sizes="(max-width: 180px) 100vw, 180px" style="display: block;"><a href="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/Image39-705x705.png" data-srcset="https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39.png 988w, https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39-300x300.png 300w, https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39-80x80.png 80w, https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39-768x768.png 768w, https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39-36x36.png 36w, https://iyerlaboratory.org/wp-content/uploads/2024/03/Image39-180x180.png 180w, ../wp-content/uploads/2024/03/Image39-705x705.png 705w" data-sizes="(max-width: 988px) 100vw, 988px" class="av-horizontal-gallery-link avia-svg-icon avia-font-svg_entypo-fontello lightbox-added" data-av_svg_icon="resize-full" data-av_iconset="svg_entypo-fontello" title="Image39" alt="Image39" aria-label="Open image in lightbox: Image39"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="25" height="32" viewBox="0 0 25 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-10" aria-describedby="av-svg-desc-10" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-10">Open image in lightbox: Image39</title>
+<desc id="av-svg-desc-10">Open image in lightbox: Image39</desc>
+<path d="M15.232 3.328h10.112v10.112l-3.2-3.968-4.672 4.864-3.2-3.2 4.864-4.672zM7.872 17.536l3.2 3.2-4.864 4.672 3.904 3.2h-10.112v-10.112l3.2 3.904z"></path>
+</svg></a></div></div></div></div></div>
+<div class="flex_column_table av-4jlaxv-690b4081c800336685c86d0636017c1f sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-4jlaxv-690b4081c800336685c86d0636017c1f av_two_fifth  avia-builder-el-2  el_after_av_one_full  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top  column-top-margin"><div class="avia-image-container av-lsak2nba-0b876893b36846f3d88b149b11f2bfda av-styling- avia-align-  avia-builder-el-3  avia-builder-el-no-sibling" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1453 avia-img-lazy-loading-not-1453 avia_image" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Science-communication-1-845x684.jpeg" alt="business communication" title="business communication" height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Science-communication-1-845x684.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Science-communication-1-845x684.jpeg 845w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-1uwakz-02ec8f4ec3c6df7dd1c9f25aea1948ab av_three_fifth  avia-builder-el-4  el_after_av_two_fifth  el_before_av_hr  flex_column_table_cell av-equal-height-column av-align-top  column-top-margin"><div id="sci-comm" class="av-special-heading av-lsak1s8w-c272c31c8b939546ea796c5f1696b9b0 av-special-heading-h2  avia-builder-el-5  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Science Communication</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-lsak0vnb-9276c5d8f8d29d335786f82ecf44b92d" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
 <p>
-• <strong><a href="https://asapbio.github.io/Preprints_and_Publishing_Training-course/" rel="noopener noreferrer">Preprints and Publishing in the Life and Biomedical Sciences</a></strong>
+
+• <strong><a target="_blank" href="https://asapbio.github.io/Preprints_and_Publishing_Training-course/" rel="noopener noreferrer">Preprints and Publishing in the Life and Biomedical Sciences</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.science.org/content/article/how-seriously-read-scientific-paper" rel="noopener noreferrer">How to read a scientific paper</a></strong>
+
+• <strong><a target="_blank" href="https://www.science.org/content/article/how-seriously-read-scientific-paper" rel="noopener noreferrer">How to read a scientific paper</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.nature.com/documents/nature-summary-paragraph.pdf" rel="noopener noreferrer">Nature guidelines for writing summary/abstract</a></strong>
+
+• <strong><a target="_blank" href="https://www.nature.com/documents/nature-summary-paragraph.pdf" rel="noopener noreferrer">Nature guidelines for writing summary/abstract</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.sciencedirect.com/science/article/pii/S1878764915001606" rel="noopener noreferrer">Writing a scientific article: A step-by-step guide for beginners</a></strong>
+
+• <strong><a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S1878764915001606" rel="noopener noreferrer">Writing a scientific article: A step-by-step guide for beginners</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://docs.google.com/document/d/1mUy1ysyaJsFQJAaObDbnOPgKyi-NUczE9HAQkhoZ1hQ/edit" rel="noopener noreferrer">Excerpt on writing from the Gusev lab handbook</a></strong>
+
+• <strong><a target="_blank" href="https://docs.google.com/document/d/1mUy1ysyaJsFQJAaObDbnOPgKyi-NUczE9HAQkhoZ1hQ/edit" rel="noopener noreferrer">Excerpt on writing from the Gusev lab handbook</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030077" rel="noopener noreferrer">Ten Simple Rules for Making Good Oral Presentations</a></strong>
+
+• <strong><a target="_blank" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.0030077" rel="noopener noreferrer">Ten Simple Rules for Making Good Oral Presentations</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.nature.com/articles/d41586-018-07780-5" rel="noopener noreferrer">How to give a great scientific talk</a></strong>
+
+• <strong><a target="_blank" href="https://www.nature.com/articles/d41586-018-07780-5" rel="noopener noreferrer">How to give a great scientific talk</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://blogs.nature.com/naturejobs/2017/02/03/successful-vs-effective-research-presentations/" rel="noopener noreferrer">Successful vs. effective research presentations</a></strong>
+
+• <strong><a target="_blank" href="https://blogs.nature.com/naturejobs/2017/02/03/successful-vs-effective-research-presentations/" rel="noopener noreferrer">Successful vs. effective research presentations</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.sciencedirect.com/science/article/pii/S1471491423000928?dgcid=author" rel="noopener noreferrer">The science of storytelling</a></strong>
+
+• <strong><a target="_blank" href="https://www.sciencedirect.com/science/article/pii/S1471491423000928?dgcid=author" rel="noopener noreferrer">The science of storytelling</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://twitter.com/iamscicomm/status/1532531980398641164?s=20" rel="noopener noreferrer">A thread on creating visually appealing slides</a></strong>
+
+• <strong><a target="_blank" href="https://twitter.com/iamscicomm/status/1532531980398641164?s=20" rel="noopener noreferrer">A thread on creating visually appealing slides</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://pubmed.ncbi.nlm.nih.gov/29349336/" rel="noopener noreferrer">Interactive journal club</a></strong>
+
+• <strong><a target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/29349336/" rel="noopener noreferrer">Interactive journal club</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://genestogenomes.org/how-to-write-titles-that-tempt/" rel="noopener noreferrer">How to write titles that tempt</a></strong>
+
+• <strong><a target="_blank" href="https://genestogenomes.org/how-to-write-titles-that-tempt/" rel="noopener noreferrer">How to write titles that tempt</a></strong>
+
 </p>
 </div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
-<div><span><span></span></span></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/Reading-citation-etc-845x684.jpeg" alt="Student with dyslexia reading a book with the help of a coloured overlay" loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="tools"><h2>Reading, Citing, Copywriting, and Imaging Tools</h2><div><div></div></div></div>
-<section><div>
+<div class="hr av-lssyv27f-ed05baddf0ef890b350d526b571ee88a hr-invisible  avia-builder-el-7  el_after_av_three_fifth  el_before_av_two_fifth"><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
+<div class="flex_column_table av-19by8rn-f49e50f4a2ff7ee0384d39d9aea6927f sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-19by8rn-f49e50f4a2ff7ee0384d39d9aea6927f av_two_fifth  avia-builder-el-8  el_after_av_hr  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top"><div class="avia-image-container av-17hpk03-76ad819946dd5693c1ef5fae3c9e97d1 av-styling- avia-align-  avia-builder-el-9  avia-builder-el-no-sibling" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1115 avia-img-lazy-loading-not-1115 avia_image" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Reading-citation-etc-845x684.jpeg" alt="Student with dyslexia reading a book with the help of a coloured overlay" title="Student with dyslexia reading a book with the help of a coloured overlay" height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Reading-citation-etc-845x684.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Reading-citation-etc-845x684.jpeg 845w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-504ier-7ec48a355734f636e15490927ddf2bdd av_three_fifth  avia-builder-el-10  el_after_av_two_fifth  el_before_av_hr  flex_column_table_cell av-equal-height-column av-align-top"><div id="tools" class="av-special-heading av-1cb8c9f-accf2017389b46bdcfe2ed5c038f2e11 av-special-heading-h2  avia-builder-el-11  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Reading, Citing, Copywriting, and Imaging Tools</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-4ozpeb-4093056260922054bd53d9b8d3a16fbb" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
 <p>
-• <strong><a href="https://feedly.com/" rel="noopener noreferrer">Feedly (Sign up for RSS feed of journals)</a></strong>
+
+• <strong><a target="_blank" href="https://feedly.com/" rel="noopener noreferrer">Feedly (Sign up for RSS feed of journals)</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.zotero.org/" rel="noopener noreferrer">Zotero (Citation software)</a></strong>
+
+• <strong><a target="_blank" href="https://www.zotero.org/" rel="noopener noreferrer">Zotero (Citation software)</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.grammarly.com/" rel="noopener noreferrer">Grammarly</a></strong>
+
+• <strong><a target="_blank" href="https://www.grammarly.com/" rel="noopener noreferrer">Grammarly</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.losethevery.com/" rel="noopener noreferrer">Lose-the-very</a></strong>
+
+• <strong><a target="_blank" href="https://www.losethevery.com/" rel="noopener noreferrer">Lose-the-very</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.powerthesaurus.org/" rel="noopener noreferrer">Power thesaurus</a></strong>
+
+• <strong><a target="_blank" href="https://www.powerthesaurus.org/" rel="noopener noreferrer">Power thesaurus</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://figshare.com/articles/presentation/LUTS_tutorial_pptx/10075196/1" rel="noopener noreferrer">Fiji inclusive color palettes plug in</a></strong>
+
+• <strong><a target="_blank" href="https://figshare.com/articles/presentation/LUTS_tutorial_pptx/10075196/1" rel="noopener noreferrer">Fiji inclusive color palettes plug in</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://darcmode.org/wp-content/uploads/2022/05/DARC-Zotero-Guide-Web.pdf" rel="noopener noreferrer">Working with Zotero: From A to Z</a></strong>
-</p>
-</div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
-<div><span><span></span></span></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/Inspirational-845x684.jpeg" alt="The hands show an innovative idea." loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="inspiration"><h2>Inspirational Resources, Thoughts, and Blogs</h2><div><div></div></div></div>
-<section><div>
-<p>
-• <strong><a href="https://helpimascientist.com/" rel="noopener noreferrer">Help! I’m a scientist!</a></strong>
-</p>
-<p>
-• <strong><a href="http://rajlaboratory.blogspot.com/" rel="noopener noreferrer">Raj Lab Blog</a></strong>
-</p>
-<p>
-• <strong><a href="https://gonzales.science/resource-blog" rel="noopener noreferrer">Gonzales Lab Resource Blog</a></strong>
-</p>
-<p>
-• <strong><a href="https://nicoleackermans.com/resources/" rel="noopener noreferrer">Nicole Ackermans Resources Page</a></strong>
-</p>
-<p>
-• <strong><a href="https://threadreaderapp.com/thread/1432654418437095431.html" rel="noopener noreferrer">Tao of Cheese by Iain Cheeseman</a></strong>
-</p>
-<p>
-• <strong><a href="https://veronikach.com/category/how-i-fail/" rel="noopener noreferrer">How I Fail: Interviews of researchers on their failures by Veronika CH</a></strong>
-</p>
-<p>
-• <strong><a href="http://biomed.news/reports" rel="noopener noreferrer">Sign up for curated manuscripts on a topic</a></strong>
-</p>
-<p>
-• <strong><a href="https://www.training.nih.gov/questions_for_potential_mentors" rel="noopener noreferrer">Sample questions for potential mentors</a></strong>
-</p>
-<p>
-• <strong><a href="https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/" rel="noopener noreferrer">Alternative sample questions for potential mentors with explanations</a></strong>
-</p>
-<p>
-• <strong><a href="https://gradschool.duke.edu/admissions/how-choose-right-graduate-school/questions-ask-graduate-program/" rel="noopener noreferrer">Sample questions for potential graduate program</a></strong>
-</p>
-<p>
-• <strong><a href="https://www.ithinkwell.com.au/resources" rel="noopener noreferrer">Calendar templates for planning and other tools</a></strong>
-</p>
-<p>
-• <strong><a href="https://docs.google.com/document/d/1jBGk-u5auVCvI5EMaQnptMWbxHHl3ncIhKgIgEzjylw/edit" rel="noopener noreferrer">Tools for Science by Arjun Raj</a></strong>
+
+• <strong><a target="_blank" href="https://darcmode.org/wp-content/uploads/2022/05/DARC-Zotero-Guide-Web.pdf" rel="noopener noreferrer">Working with Zotero: From A to Z</a></strong>
+
 </p>
 </div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
-<div><span><span></span></span></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/Career-development-495-x-400.jpeg" alt="Coach motivate to personal development" loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="career"><h2>Career Development Reading and Resources</h2><div><div></div></div></div>
-<section><div>
+<div class="hr av-9rukf7-c0703b7f1c55f3e8e584ce1131b21751 hr-invisible  avia-builder-el-13  el_after_av_three_fifth  el_before_av_two_fifth"><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
+<div class="flex_column_table av-16enb03-91fdcef71d35f6b28475bff7f6d14bd8 sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-16enb03-91fdcef71d35f6b28475bff7f6d14bd8 av_two_fifth  avia-builder-el-14  el_after_av_hr  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top"><div class="avia-image-container av-155x0bn-0fe7dbef8fd81110da07ab0f7b355a4b av-styling- avia-align-  avia-builder-el-15  avia-builder-el-no-sibling" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1113 avia-img-lazy-loading-not-1113 avia_image" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Inspirational-845x684.jpeg" alt="The hands show an innovative idea." title="The hands show an innovative idea." height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Inspirational-845x684.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Inspirational-845x684.jpeg 845w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-13jeyf7-9194b87bc2d124adedda642f642c901a av_three_fifth  avia-builder-el-16  el_after_av_two_fifth  el_before_av_hr  flex_column_table_cell av-equal-height-column av-align-top"><div id="inspiration" class="av-special-heading av-11k686b-4674c088ffe09446e6baa2e7f5e37910 av-special-heading-h2  avia-builder-el-17  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Inspirational Resources, Thoughts, and Blogs</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-10bzv37-1c005fcbf926db26d4283ece3188e62a" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
 <p>
-• <strong><a href="https://fromphdtolife.com/resources/recommended-reading/" rel="noopener noreferrer">Books for graduate career and beyond</a></strong>
+
+• <strong><a target="_blank" href="https://helpimascientist.com/" rel="noopener noreferrer">Help! I’m a scientist!</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.amazon.com/At-Helm-Leading-Laboratory-Second/dp/0879698667/ref=sr_1_3?crid=30SNKRLIAHI0&amp;keywords=at+the+helm&amp;qid=1693270199&amp;sprefix=at+the+helm%2Caps%2C165&amp;sr=8-3&amp;ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840" rel="noopener noreferrer">At the Helm</a></strong>
+
+• <strong><a target="_blank" href="http://rajlaboratory.blogspot.com/" rel="noopener noreferrer">Raj Lab Blog</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://forbetterscience.com/2016/05/17/bruno-lemaitre-on-science-and-narcissism/" rel="noopener noreferrer">Bruno Lemaitre on Science and Narcissism</a></strong>
+
+• <strong><a target="_blank" href="https://gonzales.science/resource-blog" rel="noopener noreferrer">Gonzales Lab Resource Blog</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.pathwaystoscience.org/index.aspx" rel="noopener noreferrer">Fellowship opportunities</a></strong>
+
+• <strong><a target="_blank" href="https://nicoleackermans.com/resources/" rel="noopener noreferrer">Nicole Ackermans Resources Page</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://www.hhmi.org/science-education/programs/resources/making-right-moves" rel="noopener noreferrer">Making the Right Moves</a></strong>
+
+• <strong><a target="_blank" href="https://threadreaderapp.com/thread/1432654418437095431.html" rel="noopener noreferrer">Tao of Cheese by Iain Cheeseman</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://veronikach.com/category/how-i-fail/" rel="noopener noreferrer">How I Fail: Interviews of researchers on their failures by Veronika CH</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="http://biomed.news/reports" rel="noopener noreferrer">Sign up for curated manuscripts on a topic</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://www.training.nih.gov/questions_for_potential_mentors" rel="noopener noreferrer">Sample questions for potential mentors</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://blog.ml.cmu.edu/2020/03/02/questions-to-ask-a-prospective-ph-d-advisor-on-visit-day-with-thorough-and-forthright-explanations/" rel="noopener noreferrer">Alternative sample questions for potential mentors with explanations</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://gradschool.duke.edu/admissions/how-choose-right-graduate-school/questions-ask-graduate-program/" rel="noopener noreferrer">Sample questions for potential graduate program</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://www.ithinkwell.com.au/resources" rel="noopener noreferrer">Calendar templates for planning and other tools</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://docs.google.com/document/d/1jBGk-u5auVCvI5EMaQnptMWbxHHl3ncIhKgIgEzjylw/edit" rel="noopener noreferrer">Tools for Science by Arjun Raj</a></strong>
+
 </p>
 </div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
-<div><span><span></span></span></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/Zebrafish-resources-845x684.jpeg" alt="danio zebrafish swimming isolated on white background, macro photography" loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="zebrafish"><h2>Zebrafish Resources</h2><div><div></div></div></div>
-<section><div>
+<div class="hr av-86uiyr-7d787196366abd798d32df0d16ccf4ad hr-invisible  avia-builder-el-19  el_after_av_three_fifth  el_before_av_two_fifth"><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
+<div class="flex_column_table av-2vcnyb-5e884110d8467ca15f1c22e0a457f07b sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-2vcnyb-5e884110d8467ca15f1c22e0a457f07b av_two_fifth  avia-builder-el-20  el_after_av_hr  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top"><div class="avia-image-container av-r4suoz-87e23b26fe33ff33a1b122f18948a20d av-styling- avia-align-  avia-builder-el-21  avia-builder-el-no-sibling" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1244 avia-img-lazy-loading-not-1244 avia_image" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Career-development-495-x-400.jpeg" alt="Coach motivate to personal development" title="Coach motivate to personal development" height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Career-development-495-x-400.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Career-development-495-x-400.jpeg 300w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-yei5cz-bf1d0cf8294ed09c4b8835705d402e48 av_three_fifth  avia-builder-el-22  el_after_av_two_fifth  el_before_av_hr  flex_column_table_cell av-equal-height-column av-align-top"><div id="career" class="av-special-heading av-wjigdf-6e49b8c7e88a4805860a9c6c085bb3f3 av-special-heading-h2  avia-builder-el-23  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Career Development Reading and Resources</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-txym37-83c6c4a7bae737dd3aecb7a150ea694b" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
 <p>
-• <strong><a href="https://twitter.com/ZebrafishRock" rel="noopener noreferrer">Zebrafish Rock! Twitter Account</a></strong>
+
+• <strong><a target="_blank" href="https://fromphdtolife.com/resources/recommended-reading/" rel="noopener noreferrer">Books for graduate career and beyond</a></strong>
+
 </p>
 <p>
-• <strong><a href="http://zebrafishrock.slack.com/" rel="noopener noreferrer">Zebrafish Slack Group</a></strong>
+
+• <strong><a target="_blank" href="https://www.amazon.com/At-Helm-Leading-Laboratory-Second/dp/0879698667/ref=sr_1_3?crid=30SNKRLIAHI0&amp;keywords=at+the+helm&amp;qid=1693270199&amp;sprefix=at+the+helm%2Caps%2C165&amp;sr=8-3&amp;ufe=app_do%3Aamzn1.fos.18ed3cb5-28d5-4975-8bc7-93deae8f9840" rel="noopener noreferrer">At the Helm</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://zebrahub.ds.czbiohub.org/" rel="noopener noreferrer">Zebrahub</a></strong>
+
+• <strong><a target="_blank" href="https://forbetterscience.com/2016/05/17/bruno-lemaitre-on-science-and-narcissism/" rel="noopener noreferrer">Bruno Lemaitre on Science and Narcissism</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://singlecell.broadinstitute.org/single_cell/study/SCP162/single-cell-reconstruction-of-developmental-trajectories-during-zebrafish-embryogenesis" rel="noopener noreferrer">Jeff Farrell’s Single Cell Portal</a></strong>
+
+• <strong><a target="_blank" href="https://www.pathwaystoscience.org/index.aspx" rel="noopener noreferrer">Fellowship opportunities</a></strong>
+
 </p>
 <p>
-• <strong><a href="https://kleintools.hms.harvard.edu/tools/spring.html" rel="noopener noreferrer">Dan Wagner’s Single Cell Gene Expression Data</a></strong>
-</p>
-<p>
-• <strong><a href="https://irp.nih.gov/blog/post/2016/08/why-use-zebrafish-to-study-human-diseases" rel="noopener noreferrer">Zebrafish Blog by Elizabeth Burke</a></strong>
-</p>
-<p>
-• <strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSdpQuXJSVGJgvYCFycwXSkIce_urbVIubZI_j69Rtuv6TSP4Q/viewform" rel="noopener noreferrer">Sign up for Zebrafish Slack Channel</a></strong>
-</p>
-</div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
-<div><span><span></span></span></div>
-<div class="content-row"><div class="content-row"><div><div><div><img src="/images/2024/02/DEI-and-outreach-845x684.jpeg" alt="Cartoon Crowd, Network Tentacles" loading="lazy"></div></div></div></div>
-<div class="content-row"><div id="outreach"><h2>Diversity, Equity, Inclusion, and Outreach</h2><div><div></div></div></div>
-<section><div>
-<p>
-• <strong><a href="https://www.bhallalab.com/equity-reading-list" rel="noopener noreferrer">Equity Reading List by Needhi Bhalla</a></strong>
-</p>
-<p>
-• <strong><a href="https://twitter.com/StawickiLab/status/1559213227053039616?s=20" rel="noopener noreferrer">Zebrafish education slack channel</a></strong>
-</p>
-<p>
-• <strong><a href="https://www.sheffield.ac.uk/science/week/activities#primary" rel="noopener noreferrer">Zebrafish online outreach for children</a></strong>
-</p>
-<p>
-• <strong><a href="https://learn.genetics.utah.edu/" rel="noopener noreferrer">Learn Genetics from University of Utah</a></strong>
-</p>
-<p>
-• <strong><a href="https://twitter.com/ZebrafishRock/status/1661272893999775746?s=20" rel="noopener noreferrer">Making zebrafish: outreach activity</a></strong>
+
+• <strong><a target="_blank" href="https://www.hhmi.org/science-education/programs/resources/making-right-moves" rel="noopener noreferrer">Making the Right Moves</a></strong>
+
 </p>
 </div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
+<div class="hr av-6h3ntf-03d962ae2047a878367b6a70e2252994 hr-invisible  avia-builder-el-25  el_after_av_three_fifth  el_before_av_two_fifth"><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
+<div class="flex_column_table av-pb43ir-3dd28b02caefcdc31dbc958a7a1c9fee sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-pb43ir-3dd28b02caefcdc31dbc958a7a1c9fee av_two_fifth  avia-builder-el-26  el_after_av_hr  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top"><div class="avia-image-container av-oj4idf-07763c4adce35a379421ede841c6ed3d av-styling- avia-align-  avia-builder-el-27  avia-builder-el-no-sibling  av-img-box-shadow av-box-shadow-not-animated" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1117 avia-img-lazy-loading-not-1117 avia_image shadow-not-animated" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Zebrafish-resources-845x684.jpeg" alt="danio zebrafish swimming isolated on white background, macro photography" title="danio zebrafish swimming isolated on white background, macro photography" height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Zebrafish-resources-845x684.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/Zebrafish-resources-845x684.jpeg 845w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-2b2fdf-f7b4f37f3a889eab6d67af8ca319fdc3 av_three_fifth  avia-builder-el-28  el_after_av_two_fifth  el_before_av_hr  flex_column_table_cell av-equal-height-column av-align-top"><div id="zebrafish" class="av-special-heading av-kklc5f-f56af80ad134f30fd0a54ac2f385768e av-special-heading-h2  avia-builder-el-29  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Zebrafish Resources</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-iiwaw3-e37f9ed0536d90597d782627086e9b4b" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
+<p>
+
+• <strong><a target="_blank" href="https://twitter.com/ZebrafishRock" rel="noopener noreferrer">Zebrafish Rock! Twitter Account</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="http://zebrafishrock.slack.com/" rel="noopener noreferrer">Zebrafish Slack Group</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://zebrahub.ds.czbiohub.org/" rel="noopener noreferrer">Zebrahub</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://singlecell.broadinstitute.org/single_cell/study/SCP162/single-cell-reconstruction-of-developmental-trajectories-during-zebrafish-embryogenesis" rel="noopener noreferrer">Jeff Farrell’s Single Cell Portal</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://kleintools.hms.harvard.edu/tools/spring.html" rel="noopener noreferrer">Dan Wagner’s Single Cell Gene Expression Data</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://irp.nih.gov/blog/post/2016/08/why-use-zebrafish-to-study-human-diseases" rel="noopener noreferrer">Zebrafish Blog by Elizabeth Burke</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdpQuXJSVGJgvYCFycwXSkIce_urbVIubZI_j69Rtuv6TSP4Q/viewform" rel="noopener noreferrer">Sign up for Zebrafish Slack Channel</a></strong>
+
+</p>
+</div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
+<div class="hr av-4ycuqr-953b2b8ca4ce72e9720f3217eeb9922e hr-invisible  avia-builder-el-31  el_after_av_three_fifth  el_before_av_two_fifth"><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
+<div class="flex_column_table av-bwnp6b-c2f895d5d27bce26cae758705a7b863f sc-av_two_fifth av-equal-height-column-flextable"><div class="flex_column av-bwnp6b-c2f895d5d27bce26cae758705a7b863f av_two_fifth  avia-builder-el-32  el_after_av_hr  el_before_av_three_fifth  first flex_column_table_cell av-equal-height-column av-align-top"><div class="avia-image-container av-b6hp4z-cfd64773c3335446bd2430a526f78ee6 av-styling- avia-align-  avia-builder-el-33  avia-builder-el-no-sibling  av-img-box-shadow av-box-shadow-not-animated" itemprop="image" itemscope="itemscope" itemtype="https://schema.org/ImageObject"><div class="avia-image-container-inner"><div class="avia-image-overlay-wrap"><img decoding="async" fetchpriority="high" class="wp-image-1112 avia-img-lazy-loading-not-1112 avia_image shadow-not-animated" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/DEI-and-outreach-845x684.jpeg" alt="Cartoon Crowd, Network Tentacles" title="Cartoon Crowd, Network Tentacles" height="400" width="495" itemprop="thumbnailUrl" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/DEI-and-outreach-845x684.jpeg 495w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/02/DEI-and-outreach-845x684.jpeg 845w" sizes="(max-width: 495px) 100vw, 495px"></div></div></div></div>
+<div class="av-flex-placeholder"></div><div class="flex_column av-h2ty1f-03ade43984cae67081518b6185584f0a av_three_fifth  avia-builder-el-34  el_after_av_two_fifth  avia-builder-el-last  flex_column_table_cell av-equal-height-column av-align-top"><div id="outreach" class="av-special-heading av-ggpowz-c64fa6db4e6f6b6d80d19dfe17fb0298 av-special-heading-h2  avia-builder-el-35  el_before_av_textblock  avia-builder-el-first"><h2 class="av-special-heading-tag" itemprop="headline">Diversity, Equity, Inclusion, and Outreach</h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-dioe2r-5ab9a21d075c4b4da656abbc85bc0e15" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock" itemprop="text">
+<style>
+.post-meta-infos {display:none;}
+</style>
+
+<p>
+
+• <strong><a target="_blank" href="https://www.bhallalab.com/equity-reading-list" rel="noopener noreferrer">Equity Reading List by Needhi Bhalla</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://twitter.com/StawickiLab/status/1559213227053039616?s=20" rel="noopener noreferrer">Zebrafish education slack channel</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://www.sheffield.ac.uk/science/week/activities#primary" rel="noopener noreferrer">Zebrafish online outreach for children</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://learn.genetics.utah.edu/" rel="noopener noreferrer">Learn Genetics from University of Utah</a></strong>
+
+</p>
+<p>
+
+• <strong><a target="_blank" href="https://twitter.com/ZebrafishRock/status/1661272893999775746?s=20" rel="noopener noreferrer">Making zebrafish: outreach activity</a></strong>
+
+</p>
+</div></section></div></div><!--close column table wrapper. Autoclose: 1 -->
+</div></div></main><!-- close content main element --> <!-- section close by builder template -->		</div><!--end builder template--></div><!-- close default .container_wrap element -->				<div class="container_wrap footer_color" id="footer">
+
+                    <div class="container">
+
+                        <div class="flex_column av_one_fourth  first el_before_av_one_fourth"><section id="text-5" class="widget clearfix widget_text">			<div class="textwidget"><p><img decoding="async" title="Rice SNS Biosciences" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences.png" alt="Rice SNS Biosciences" width="848" height="233" class="alignnone size-full wp-image-1019" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences.png 848w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences-300x82.png 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences-768x211.png 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences-845x233.png 845w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/01/Rice-SNS-Biosciences-705x194.png 705w" sizes="(max-width: 848px) 100vw, 848px"></p>
+</div>
+        <span class="seperator extralight-border"></span></section></div><div class="flex_column av_one_fourth  el_after_av_one_fourth el_before_av_one_fourth"><section id="text-2" class="widget clearfix widget_text"><h3 class="widgettitle">Links</h3>			<div class="textwidget"><p><a href="https://biosciences.rice.edu/biochemistry-and-cell-biology-graduate-program" target="_blank" rel="noopener">Rice BCB Graduate Program</a><br>
+<a href="https://profiles.rice.edu/faculty/harini-iyer" target="_blank" rel="noopener">Iyer Lab Biosciences Profile</a></p>
+</div>
+        <span class="seperator extralight-border"></span></section></div><div class="flex_column av_one_fourth  el_after_av_one_fourth el_before_av_one_fourth"><section id="text-4" class="widget clearfix widget_text"><h3 class="widgettitle">Contact Us</h3>			<div class="textwidget"><p class="p1" style="margin: 0in;">6100 Main Street</p>
+<p class="p1" style="margin: 0in;">George R. Brown Hall, MS-140</p>
+<p class="p1" style="margin: 0in;">Houston, TX 77005</p>
+<p class="p1" style="margin: 0in;">(713) 348-3062</p>
+</div>
+        <span class="seperator extralight-border"></span></section></div><div class="flex_column av_one_fourth  el_after_av_one_fourth el_before_av_one_fourth"><section id="text-6" class="widget clearfix widget_text">			<div class="textwidget"><p><img decoding="async" class="alignnone size-medium wp-image-2171" title="rice university for footer" src="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/rice-university-for-footer-300x169.jpg" alt="rice university for footer" width="300" height="169" srcset="__SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/rice-university-for-footer-300x169.jpg 300w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/rice-university-for-footer-768x432.jpg 768w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/rice-university-for-footer-705x396.jpg 705w, __SITE_BASE_PATH__/original/iyerlaboratory.org/wp-content/uploads/2024/03/rice-university-for-footer.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px"></p>
+</div>
+        <span class="seperator extralight-border"></span></section></div>
+                    </div>
+
+                <!-- ####### END FOOTER CONTAINER ####### -->
+                </div>
+
+
+
+
+                <footer class="container_wrap socket_color" id="socket" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter" aria-label="Copyright and company info">
+                    <div class="container">
+
+                        <span class="copyright">© Copyright Iyer Lab. Logo art by <a href="https://www.linkedin.com/in/ellen-bouchard?trk=public_post_follow-view-profile">Ellen Bouchard</a>. Site by <a href="https://www.academicwebpages.com/" target="_blank">Academic Web Pages</a></span>
+
+                        <nav class="sub_menu_socket" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement"><div class="avia3-menu"><ul role="menu" class="menu" id="avia3-menu"><li role="menuitem" id="menu-item-2202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-1"><a href="__SITE_BASE_PATH__/iyer-lab-resources/" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Iyer Lab Internal</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+<li role="menuitem" id="menu-item-248" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-top-level menu-item-top-level-2"><a href="https://iyerlaboratory.org/wp-login.php" itemprop="url" tabindex="0"><span class="avia-bullet"></span><span class="avia-menu-text">Login</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+</ul></div></nav>
+                    </div>
+
+                <!-- ####### END SOCKET CONTAINER ####### -->
+                </footer>
+
+
+                    <!-- end main -->
+        </div>
+
+        <!-- end wrap_all -->
+<a href="#top" title="Scroll to top" id="scroll-top-link" class="avia-svg-icon avia-font-svg_entypo-fontello" data-av_svg_icon="up-open" data-av_iconset="svg_entypo-fontello" tabindex="-1" aria-hidden="true">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="19" height="32" viewBox="0 0 19 32" preserveAspectRatio="xMidYMid meet" aria-labelledby="av-svg-title-11" aria-describedby="av-svg-desc-11" role="graphics-symbol" aria-hidden="true">
+<title id="av-svg-title-11">Scroll to top</title>
+<desc id="av-svg-desc-11">Scroll to top</desc>
+<path d="M18.048 18.24q0.512 0.512 0.512 1.312t-0.512 1.312q-1.216 1.216-2.496 0l-6.272-6.016-6.272 6.016q-1.28 1.216-2.496 0-0.512-0.512-0.512-1.312t0.512-1.312l7.488-7.168q0.512-0.512 1.28-0.512t1.28 0.512z"></path>
+</svg>	<span class="avia_hidden_link_text">Scroll to top</span>
+</a>

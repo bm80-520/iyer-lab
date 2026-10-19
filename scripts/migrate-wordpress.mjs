@@ -1,101 +1,181 @@
-// One-time migration. Normal edits belong in content/, not the archived snapshot.
+// Re-import the checked-in main-branch snapshot without rewriting its design or copy.
+// Run deliberately: this replaces content/pages and the original presentation assets.
 import { load } from 'cheerio';
-import { mkdir, readFile, readdir, copyFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, copyFile, writeFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
-const source = 'archive/iyerlaboratory.org';
+const archive = path.resolve('archive');
+const source = path.join(archive, 'iyerlaboratory.org');
+const destination = 'public/original';
+const baseToken = '__SITE_BASE_PATH__';
+const copied = new Map();
+const missing = new Set();
+const routes = new Set(['']);
 const pages = [];
-const assets = new Map();
-const allowed = new Set('div section p h2 h3 h4 h5 ul ol li a img strong em b i br hr blockquote table thead tbody tr th td figure figcaption span sub sup'.split(' '));
 
-async function localUrl(value, slug) {
-  if (!value || value.startsWith('#') || /^(mailto:|tel:)/i.test(value)) return value;
-  const url = new URL(value, `https://iyerlaboratory.org/${slug}/`);
-  if (url.hostname !== 'iyerlaboratory.org') return url.href;
-  const pathname = decodeURIComponent(url.pathname);
-  if (pathname.startsWith('/wp-content/uploads/')) {
-    let relative = pathname.slice('/wp-content/uploads/'.length);
-    // The downloader did not always save the requested thumbnail. Prefer an
-    // available resolution of the same image instead of relying on WordPress.
-    try { await readFile(path.join(source, 'wp-content/uploads', relative)); }
-    catch {
-      const folder = path.dirname(relative);
-      const name = path.basename(relative).replace(/-\d+x\d+(?=\.[^.]+$)/, '');
-      const alternatives = (await readdir(path.join(source, 'wp-content/uploads', folder))).filter(file => file.replace(/-\d+x\d+(?=\.[^.]+$)/, '') === name);
-      if (alternatives.length) relative = path.join(folder, alternatives.sort()[0]);
-    }
-    const target = `/images/${relative}`;
-    if (!assets.has(target)) {
-      await mkdir(path.dirname(`public${target}`), { recursive: true });
-      try {
-        await copyFile(path.join(source, 'wp-content/uploads', relative), `public${target}`);
-        assets.set(target, true);
-      } catch { console.warn(`Missing archived asset: ${pathname}`); return url.href; }
-    }
-    return target;
-  }
-  if (pathname === '/home-page/') return '/';
-  const route = pathname.replace(/index\.html$/, '');
-  try { await readFile(path.join(source, route, 'index.html')); }
-  catch { return url.href; } // Unsaved destinations remain links to the original site.
-  return route + url.search + url.hash;
-}
-
-async function clean(html, slug, emailClass) {
-  const $ = load(html, null, false);
-  $('script, style, iframe, form, button, .av-horizontal-gallery, .avia-slideshow, .av-screen-reader-only, .image-overlay, .av-flex-placeholder, .av-masonry-entry-no-image, .av-social-sharing-box').remove();
-  // Keep the content and useful layout, discarding WordPress behavior and attributes.
-  for (const element of $('*').toArray()) {
-    const el = $(element);
-    if (!allowed.has(element.tagName)) { el.replaceWith(el.contents()); continue; }
-    const classes = el.attr('class') || '';
-    if (emailClass && classes.split(/\s+/).includes(emailClass)) el.text([...el.text()].reverse().join(''));
-    const href = el.attr('href');
-    const src = el.attr('src');
-    const alt = el.attr('alt');
-    const id = el.attr('id');
-    for (const key of Object.keys(element.attribs)) el.removeAttr(key);
-    if (id) el.attr('id', id);
-    if (classes.split(/\s+/).includes('row') || classes.includes('flex_column_table')) el.attr('class', 'content-row');
-    else if (classes.split(/\s+/).includes('column-1')) el.attr('class', 'content-column content-visual');
-    else if (classes.split(/\s+/).includes('column-2') || classes.includes('flex_column')) el.attr('class', 'content-column');
-    if (href) {
-      el.attr('href', await localUrl(href, slug));
-      if (/^https?:/.test(el.attr('href'))) el.attr('rel', 'noopener noreferrer');
-    }
-    if (src) {
-      el.attr('src', await localUrl(src, slug));
-      el.attr('alt', alt || '');
-      el.attr('loading', 'lazy');
-    }
-  }
-  return $.html().replace(/\n\s*\n/g, '\n');
-}
-
-async function visit(directory) {
+async function discover(directory) {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
-    if (entry.isDirectory() && !entry.name.startsWith('wp-') && !['feed', 'comments'].includes(entry.name)) await visit(path.join(directory, entry.name));
-    if (entry.name !== 'index.html' || directory === source) continue;
-    const slug = path.relative(source, directory).split(path.sep).join('/');
-    const $ = load(await readFile(path.join(directory, entry.name), 'utf8'));
-    const article = $('article.post-entry-type-standard').first();
-    const isNews = article.length > 0 && !slug.startsWith('research/');
-    const title = $('head > title').first().text().replace(/\s*[–—-]\s*Iyer Lab$/, '').trim();
-    let html = article.length ? (article.find('.big-preview').html() || '') + (article.find('.entry-content').html() || '') : $('.entry-content-wrapper').first().html();
-    if (!html) throw new Error(`No content found for ${slug}`);
-    // Lab news gets a native list of the migrated articles instead of a JS masonry widget.
-    if (slug === 'lab-news') html = '';
-    if (slug === 'iyer-lab-resources') html = '<p>For internal lab resources, please contact <a href="mailto:iyer@rice.edu">iyer@rice.edu</a>.</p>';
-    const file = `${slug.replaceAll('/', '--')}.html`;
-    const emailClass = $('style[data-eae-name]').attr('data-eae-name');
-    await writeFile(`content/pages/${file}`, await clean(html, slug, emailClass));
-    pages.push({ slug, title, file, kind: isNews ? 'news' : 'page', ...(isNews ? { date: article.find('time').attr('datetime')?.slice(0, 10) } : {}) });
+    if (entry.isDirectory() && !entry.name.startsWith('wp-') && !['feed', 'comments'].includes(entry.name)) await discover(path.join(directory, entry.name));
+    if (entry.name === 'index.html' && directory !== source) routes.add(path.relative(source, directory));
   }
+}
+await discover(source);
+
+function resolveUrl(value, from) {
+  if (!value || /^(#|data:|mailto:|tel:|javascript:)/i.test(value)) return null;
+  return new URL(value, `https://snapshot.local/${path.relative(archive, from)}`);
+}
+
+async function archivedFile(url) {
+  let relative = decodeURIComponent(url.pathname).replace(/^\//, '');
+  if (url.hostname !== 'snapshot.local') relative = `${url.hostname}/${relative}`;
+  let file = path.join(archive, relative);
+  if (!file.startsWith(`${archive}/`)) return null;
+  try { if ((await stat(file)).isFile()) return file; } catch {}
+  // Some thumbnails and versioned URLs were saved under a different resolution/version.
+  const directory = path.dirname(file);
+  const requested = path.basename(file);
+  const stem = requested.replace(/[?﹖].*$/, '').replace(/-\d+x\d+(?=\.[^.]+$)/, '');
+  try {
+    const alternatives = (await readdir(directory)).filter(name => name.replace(/[?﹖].*$/, '').replace(/-\d+x\d+(?=\.[^.]+$)/, '') === stem).sort();
+    if (alternatives.length) return path.join(directory, alternatives[0]);
+  } catch {}
+  return null;
+}
+
+function publicUrl(file) {
+  return `/original/${path.relative(archive, file).split(path.sep).map(encodeURIComponent).join('/')}`;
+}
+
+async function copyAsset(file) {
+  if (copied.has(file)) return copied.get(file);
+  const url = publicUrl(file);
+  copied.set(file, url);
+  const target = path.join(destination, path.relative(archive, file));
+  await mkdir(path.dirname(target), { recursive: true });
+  if (file.endsWith('.css')) {
+    const css = await rewriteCss(await readFile(file, 'utf8'), file, file);
+    await writeFile(target, css);
+  } else await copyFile(file, target);
+  return url;
+}
+
+async function localUrl(value, from, cssFrom) {
+  const url = resolveUrl(value, from);
+  if (!url) return value;
+  let pathname = decodeURIComponent(url.pathname);
+  if (url.hostname === 'snapshot.local' && pathname.startsWith('/iyerlaboratory.org/')) pathname = pathname.slice('/iyerlaboratory.org'.length);
+  if (url.hostname === 'iyerlaboratory.org' || (url.hostname === 'snapshot.local' && url.pathname.startsWith('/iyerlaboratory.org/'))) {
+    const slug = pathname.replace(/^\//, '').replace(/index\.html$/, '').replace(/\/$/, '');
+    if (routes.has(slug) || slug === 'home-page') return `${baseToken}/${slug === 'home-page' || !slug ? '' : slug + '/'}${url.search}${url.hash}`;
+    // The downloader renamed the login endpoint; authentication still belongs
+    // to the live WordPress site, never a copied login screen on static hosting.
+    if (/\/wp-login\.(html|php)$/.test(pathname)) return `https://iyerlaboratory.org/wp-login.php${url.search}${url.hash}`;
+  }
+  const file = await archivedFile(url);
+  if (file) {
+    const asset = await copyAsset(file);
+    if (cssFrom) return path.relative(path.dirname(cssFrom), file).split(path.sep).map(part => part === '..' ? part : encodeURIComponent(part)).join('/') + url.hash;
+    return baseToken + asset + url.hash;
+  }
+  if (url.hostname === 'snapshot.local') {
+    const website = url.pathname.split('/')[1];
+    const external = `https://${website}${url.pathname.slice(website.length + 1)}${url.search}${url.hash}`;
+    if (/\.(css|js|png|jpe?g|svg|woff2?)(?:[?﹖]|$)/i.test(value)) missing.add(external);
+    return external;
+  }
+  return url.href;
+}
+
+async function replaceAsync(text, regex, replacement) {
+  const matches = [...text.matchAll(regex)];
+  const values = [];
+  for (const match of matches) values.push(await replacement(...match));
+  let index = 0;
+  return text.replace(regex, () => values[index++]);
+}
+async function rewriteCss(css, from, cssFrom) {
+  return replaceAsync(css, /url\(\s*(['"]?)([^'"\)]+)\1\s*\)/g, async (_, quote, url) => `url("${await localUrl(url.trim(), from, cssFrom)}")`);
 }
 
 await mkdir('content/pages', { recursive: true });
-await visit(source);
+const home = load(await readFile(path.join(source, 'index.html'), 'utf8'));
+// The home page originally injects this same archived font sheet with JavaScript.
+const fontDirectory = path.join(archive, 'fonts.googleapis.com');
+const fontFile = (await readdir(fontDirectory)).find(name => name.endsWith('.css'));
+const fontUrl = await copyAsset(path.join(fontDirectory, fontFile));
+for (const slug of routes) {
+  const from = path.join(source, slug, 'index.html');
+  const $ = load(await readFile(from, 'utf8'));
+  const styles = [fontUrl];
+  for (const element of $('link[rel="stylesheet"]').toArray()) {
+    const url = await localUrl($(element).attr('href'), from);
+    if (url.startsWith(baseToken)) styles.push(url.slice(baseToken.length));
+    // A few pages reference generated WordPress sheets absent from the download.
+    // Their captured inline styles remain below; no remote CSS is loaded.
+  }
+  let inlineCss = '';
+  for (const element of $('head style').toArray()) inlineCss += '\n' + await rewriteCss($(element).text(), from);
+  const wrap = $('#wrap_all');
+  if (!wrap.length) throw new Error(`No original layout found: ${slug}`);
+  // Keep the full design, forms, galleries and all visible source text. Script
+  // behavior is initialized once by the shared local presentation bundle.
+  wrap.find('script').remove();
+  const emailClass = $('style[data-eae-name]').attr('data-eae-name');
+  if (emailClass) {
+    wrap.find(`.${emailClass}`).each((_, element) => {
+      const el = $(element);
+      el.text([...el.text()].reverse().join(''));
+      el.removeClass(emailClass);
+    });
+  }
+  for (const element of wrap.find('*').toArray()) {
+    const el = $(element);
+    for (const attr of ['href', 'src', 'poster', 'action', 'data-src']) {
+      if (el.attr(attr)) el.attr(attr, await localUrl(el.attr(attr), from));
+    }
+    if (el.attr('srcset')) el.attr('srcset', await replaceAsync(el.attr('srcset'), /([^\s,]+)(\s+\d+[wx])?/g, async (_, url, size) => (await localUrl(url, from)) + (size || '')));
+    if (el.attr('style')) el.attr('style', await rewriteCss(el.attr('style'), from));
+    // Email obfuscation's JavaScript links are decoded to regular mailto links.
+    const onclick = el.attr('onclick');
+    if (onclick?.includes('__eae_open')) {
+      const encoded = onclick.match(/__eae_open\(['"]([^'"]+)/)?.[1];
+      if (encoded) el.attr('href', encoded.replace(/[a-z]/gi, c => String.fromCharCode(c.charCodeAt(0) + (c.toLowerCase() <= 'm' ? 13 : -13))));
+    }
+    for (const attr of Object.keys(element.attribs)) if (/^on/i.test(attr)) el.removeAttr(attr);
+  }
+  const file = `${slug ? slug.replaceAll('/', '--') : 'home'}.html`;
+  const markup = `<style>${inlineCss}</style>\n${wrap.html()}\n${$('#scroll-top-link').toString()}`;
+  await writeFile(`content/pages/${file}`, markup.replace(/^[ \t]+/gm, indent => indent.replace(/\t/g, '    ')).replace(/[ \t]+$/gm, ''));
+  const article = $('article.post-entry-type-standard').first();
+  const isNews = article.length > 0 && !slug.startsWith('research/');
+  pages.push({ slug, title: $('head > title').text().replace(/\s*[–—-]\s*Iyer Lab$/, '').trim(), file, kind: isNews ? 'news' : 'page', styles: [...new Set(styles)], htmlClass: $('html').attr('class').replace(/\s+/g, ' ').trim(), bodyClass: $('body').attr('class').replace(/\s+/g, ' ').trim(), ...(isNews ? { date: article.find('time').attr('datetime')?.slice(0, 10) } : {}) });
+}
+
+// Retain the original theme's slideshow, galleries, masonry, tabs, menus and
+// lightbox. These scripts run locally; no WordPress install is required.
+const scripts = home('script[src]').toArray().filter(element => {
+  const id = home(element).attr('id') || '';
+  return /^(jquery|avia-|underscore|collapseomatic)/.test(id) && !/google_maps|dotlottie|audioplayer|chart|contact|lottie|video|image-diff/.test(id);
+});
+let bundle = '/* Original presentation scripts from the archived main branch. */\nvar avia_framework_globals = {};\nconst com_options = {colomatduration:"fast",colomatslideEffect:"slideFade",colomatpauseInit:"",colomattouchstart:""};\n';
+for (const element of scripts) {
+  const file = await archivedFile(resolveUrl(home(element).attr('src'), path.join(source, 'index.html')));
+  if (!file) throw new Error(`Missing presentation script ${home(element).attr('src')}`);
+  bundle += `\n;/* ${home(element).attr('id')} */\n${await readFile(file, 'utf8')}\n;\n`;
+}
+// Older news was never downloaded. Keep the original control and send readers
+// to the live news archive rather than making a WordPress AJAX call on Pages.
+bundle += `\ndocument.addEventListener('click', function(event) {
+  if (event.target instanceof Element && event.target.closest('.av-masonry-load-more')) {
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.location.assign('https://iyerlaboratory.org/lab-news/');
+  }
+}, true);\n`;
+await writeFile(`${destination}/presentation.js`, bundle);
 pages.sort((a, b) => a.slug.localeCompare(b.slug));
 await writeFile('content/pages.json', JSON.stringify(pages, null, 2) + '\n');
 await writeFile('public/.nojekyll', '');
-console.log(`Migrated ${pages.length} pages and ${assets.size} local assets.`);
+console.log(`Restored ${pages.length} original page layouts, ${copied.size} assets, and ${scripts.length} presentation scripts.`);
+if (missing.size) console.log('Assets absent from the original snapshot:\n' + [...missing].join('\n'));
