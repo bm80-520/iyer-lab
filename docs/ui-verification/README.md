@@ -1,6 +1,8 @@
 # UI verification
 
-The reference is the archived `main` website under `archive/iyerlaboratory.org`.
+The reference was the downloaded `main` website. Its archive and migration
+tooling were removed after verification; the source remains recoverable from
+Git history before the removal commit. These screenshots are retained.
 Screenshots were captured in Chrome at 1440×1000 and 390×1000 CSS pixels, after
 fonts and images loaded. They show the same research page in the source and
 the native Next.js implementation.
@@ -23,7 +25,8 @@ scrolling, lightbox open, keyboard next, Escape close, recruitment keyboard focu
 and hydrated news layout with all 12 cards. No client runtime exceptions were
 reported during those checks.
 
-`npm run check:original` independently checks source copy, navigation and Rice
-branding across 19 pages and rejects legacy styling markup. `npm run check:export`
+Before removal, the source comparison verified copy, navigation and Rice
+branding across 19 pages. That archive-dependent check has been removed.
+`npm run check:export`
 checks local links, srcsets, form destinations, and assets, including CSS fonts.
 See [the editing guide](../EDITING.md) for build and base-path commands.

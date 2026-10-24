@@ -8,8 +8,6 @@
     "typecheck": "next typegen --webpack && tsc --noEmit",
     "preview": "node scripts/preview.mjs",
     "check:export": "node scripts/check-export.mjs",
-    "check:original": "node scripts/check-original.mjs",
-    "import:archive": "node scripts/import-content.mjs",
     "format": "prettier --write src content/data content/text scripts README.md docs .github/workflows/deploy.yml",
     "format:check": "prettier --check src content/data content/text scripts README.md docs .github/workflows/deploy.yml"
   },
@@ -26,11 +24,8 @@
     "@types/node": "^22.0.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "@types/turndown": "^5.0.6",
     "cheerio": "^1.1.2",
     "prettier": "^3.9.10",
-    "sharp": "^0.35.5",
-    "turndown": "^7.2.4",
     "typescript": "^5.9.0"
   }
 }

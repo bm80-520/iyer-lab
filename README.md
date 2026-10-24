@@ -25,7 +25,6 @@ src/styles/       Readable CSS: theme, typography, layout, media, page patterns
 src/components/   Shared header/footer, content layouts, gallery, and slideshow
 public/images/    Original Rice branding, photographs, illustrations, and PDFs
 public/fonts/     Local copies of the original fonts
-archive/          Original main website; read-only reference, not deployed
 ```
 
 `src/styles/theme.css` is the single place for sitewide colors, font sizes,
@@ -39,13 +38,14 @@ npm run format:check
 npm run typecheck
 npm run build
 npm run check:export
-npm run check:original
 npm run preview
 ```
 
 The export validator checks page links, responsive images, forms, fonts, and CSS
-assets. The source comparison checks preservation of the main website's copy,
-navigation, and Rice branding, without requiring WordPress classes or markup.
+assets. Reference screenshots and the completed comparison results are in
+[UI verification](docs/ui-verification/README.md). The downloaded source archive
+and its one-time migration tooling were removed after migration; they remain
+recoverable from Git history.
 
 ## Deploy on GitHub Pages
 

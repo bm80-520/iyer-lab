@@ -1,8 +1,9 @@
 # Editing the Iyer Lab website
 
 Ordinary updates need only a text editor. Content lives in `content/`; appearance
-lives in `src/styles/`. The original site remains in `archive/` as a reference.
-Do not edit the archive or run the import command for ordinary updates.
+lives in `src/styles/`. Reference screenshots remain in `docs/ui-verification/`.
+The original downloaded site and migration tooling are recoverable from Git
+history before their removal; ordinary editing uses only the current content.
 
 ## Find the right file
 
@@ -118,11 +119,6 @@ npm run build
 npm run check:export
 ```
 
-`npm run check:original` compares the exported content against the original
-snapshot. It guards this visual-preservation refactor. An intentional future
-content update may correctly differ from the archive; review those differences
-rather than altering the archive to silence the comparison.
-
 To check a GitHub Pages project deployment, use the same base path for build,
 validation, and preview:
 
@@ -131,7 +127,3 @@ NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run build
 NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run check:export
 NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run preview
 ```
-
-The one-time `npm run import:archive` command replaces the imported Markdown/data
-and recopies original images. It does not generate CSS or React layouts. Commit
-any edits before deliberately rerunning it.
