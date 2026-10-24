@@ -1,0 +1,114 @@
+{
+  "gallery": [
+    {
+      "src": "/images/2024/03/Image1-180x180.png",
+      "alt": "Image1",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image1.png"
+    },
+    {
+      "src": "/images/2024/03/Image2-180x180.png",
+      "alt": "Image2",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image2.png"
+    },
+    {
+      "src": "/images/2024/03/Image3-180x180.png",
+      "alt": "Image3",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image3.png"
+    },
+    {
+      "src": "/images/2024/03/Image4-180x180.png",
+      "alt": "Image4",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image4.png"
+    },
+    {
+      "src": "/images/2024/03/Image6-180x180.png",
+      "alt": "Image6",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image6.png"
+    },
+    {
+      "src": "/images/2024/03/Image7-180x180.png",
+      "alt": "Image7",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image7.png"
+    },
+    {
+      "src": "/images/2024/03/Image8a-180x180.png",
+      "alt": "Image8a",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image8a.png"
+    },
+    {
+      "src": "/images/2024/03/Image8b-180x180.png",
+      "alt": "Image8b",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image8b.png"
+    },
+    {
+      "src": "/images/2024/03/Image8c-180x180.png",
+      "alt": "Image8c",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image8c.png"
+    }
+  ],
+  "items": [
+    {
+      "id": "research-1",
+      "title": "Primer: Read about why we are captivated by microglia",
+      "image": {
+        "src": "/images/2024/01/Primer-1030x572.jpeg",
+        "alt": "",
+        "width": 1030,
+        "height": 572
+      },
+      "body": "text/research/1.md",
+      "link": {
+        "label": "Learn More",
+        "href": "/research/primer/"
+      }
+    },
+    {
+      "id": "research-2",
+      "title": "Explore our Lysosomal Biology-Related Projects",
+      "image": {
+        "src": "/images/2024/01/Lysosome-scaled-e1709561576850-1030x571.jpeg",
+        "alt": "",
+        "width": 1030,
+        "height": 571
+      },
+      "body": "text/research/2.md",
+      "link": {
+        "label": "Learn More",
+        "href": "/research/lysosomal-projects/"
+      }
+    },
+    {
+      "id": "research-3",
+      "title": "Delve into our research on Microglia and Brain Disorders",
+      "image": {
+        "src": "/images/2024/01/Microglia-and-brain-disorders-scaled-e1709561534850-1030x571.jpeg",
+        "alt": "",
+        "width": 1030,
+        "height": 571
+      },
+      "body": "text/research/3.md",
+      "link": {
+        "label": "Learn More",
+        "href": "/research/microglia-and-brain-disorders/"
+      }
+    }
+  ]
+}

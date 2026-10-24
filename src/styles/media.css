@@ -1,0 +1,154 @@
+/* Images, galleries and their controls. These rules replace the WordPress
+   slideshow/gallery plugins; content files only hold image paths and alt text. */
+.slideshow {
+  position: relative;
+  aspect-ratio: 1600 / 1017;
+  overflow: hidden;
+}
+.slideshow-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.slideshow-slide.is-active {
+  opacity: 1;
+}
+.slideshow-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-control {
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  color: white;
+  background: rgb(0 0 0 / 25%);
+  font:
+    48px/1 Arial,
+    sans-serif;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+.image-control.previous {
+  left: 0;
+}
+.slideshow .image-control.previous {
+  left: 30px;
+}
+.slideshow .image-control.next {
+  right: 30px;
+}
+.image-control.next {
+  right: 0;
+}
+.slideshow:hover .image-control,
+.gallery:hover .image-control,
+.image-control:focus-visible {
+  opacity: 1;
+}
+.slideshow-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.slideshow:hover .slideshow-dots,
+.slideshow-dots:focus-within {
+  opacity: 1;
+}
+.slideshow-dots button {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 50%);
+}
+.slideshow-dots .is-active {
+  background: white;
+}
+.gallery {
+  position: relative;
+  padding-block: 2.25%;
+}
+.gallery-strip {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.gallery-strip::-webkit-scrollbar {
+  display: none;
+}
+.gallery-item {
+  display: block;
+  flex: 0 0 15%;
+  aspect-ratio: 1;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .image-control {
+  width: 45px;
+  height: 60px;
+}
+.lightbox {
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: transparent;
+}
+.lightbox::backdrop {
+  background: rgb(0 0 0 / 85%);
+}
+.lightbox img {
+  display: block;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+.lightbox .image-control {
+  opacity: 1;
+}
+.lightbox-close {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  background: transparent;
+  border: 0;
+  color: white;
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .gallery {
+    padding-block: 2.25%;
+  }
+  .gallery-strip {
+    height: 180px;
+  }
+  .gallery-item {
+    flex-basis: 180px;
+  }
+  .gallery-desktop {
+    display: none;
+  }
+}

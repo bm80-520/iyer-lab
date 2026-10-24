@@ -1,0 +1,30 @@
+/* Start here for sitewide changes. These values reproduce the main website.
+   Responsive breakpoints are grouped in layout.css and content.css. */
+:root {
+  --color-ink: #222222;
+  --color-heading: #002569;
+  --color-link: #222222;
+  --color-content: #eeeeee;
+  --color-link-hover: #0649b5;
+  --color-paper: #ffffff;
+  --color-footer: #f8f8f8;
+  --color-border: #e1e1e1;
+  --color-muted: #919191;
+  --color-copyright: #c1c6c8;
+  --font-body: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-heading: 'Merriweather', Helvetica, Arial, sans-serif;
+  --text-size: 15px;
+  --text-leading: 1.65;
+  --heading-weight: 600;
+  --heading-1-size: 22px;
+  --heading-2-size: 20px;
+  --heading-3-size: 18px;
+  --paragraph-space: 0.85em;
+  --heading-space: 10px;
+  --container-width: 1310px;
+  --container-gutter: 50px;
+  --section-space: 50px;
+  --column-gap: 6%;
+  --header-height: 88px;
+  --image-shadow: 0 4px 8px rgb(0 0 0 / 20%), 0 6px 20px rgb(0 0 0 / 19%);
+}

@@ -1,0 +1,154 @@
+{
+  "gallery": [
+    {
+      "src": "/images/2024/03/Image12-180x180.png",
+      "alt": "Image12",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image12.png"
+    },
+    {
+      "src": "/images/2024/03/Image13-180x180.png",
+      "alt": "Image13",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image13.png"
+    },
+    {
+      "src": "/images/2024/03/Image21-180x180.png",
+      "alt": "Image21",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image21.png"
+    },
+    {
+      "src": "/images/2024/03/Image22-180x180.png",
+      "alt": "Image22",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image22.png"
+    },
+    {
+      "src": "/images/2024/03/Image23-180x180.png",
+      "alt": "Image23",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image23.png"
+    },
+    {
+      "src": "/images/2024/03/Image26-180x180.png",
+      "alt": "Image26",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image26.png"
+    },
+    {
+      "src": "/images/2024/03/Image27-180x180.png",
+      "alt": "Image27",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image27.png"
+    },
+    {
+      "src": "/images/2024/03/Image28-180x180.png",
+      "alt": "Image28",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image28.png"
+    }
+  ],
+  "members": [
+    {
+      "id": "harini-iyer",
+      "name": "Harini Iyer",
+      "role": "Principal Investigator",
+      "joined": "January 2024",
+      "email": "iyer@rice.edu",
+      "links": [
+        {
+          "label": "X",
+          "href": "https://twitter.com/gliainmymind"
+        },
+        {
+          "label": "BlueSky",
+          "href": "https://bsky.app/profile/iyerharini.bsky.social"
+        },
+        {
+          "label": "PubMed",
+          "href": "https://www.ncbi.nlm.nih.gov/myncbi/1RA2Njff4B9Qc/bibliography/public/"
+        },
+        {
+          "label": "CV",
+          "href": "/images/2024/01/Iyer_CV_Jun2025.pdf"
+        }
+      ],
+      "image": {
+        "src": "/images/2024/02/Harini-Iyer.png",
+        "alt": "Harini Iyer",
+        "width": 750,
+        "height": 750
+      },
+      "body": "text/team/harini-iyer.md"
+    },
+    {
+      "id": "emilio-mendez-scolari",
+      "name": "Emilio Méndez Scolari",
+      "role": "Graduate Student",
+      "joined": "January 2025",
+      "email": "em101@rice.edu",
+      "links": [],
+      "image": {
+        "src": "/images/2025/02/Emilio-Scolari-07-975x1030.jpg",
+        "alt": "Emilio Méndez Scolari",
+        "width": 975,
+        "height": 1030
+      },
+      "body": "text/team/emilio-mendez-scolari.md"
+    },
+    {
+      "id": "brandon-martz",
+      "name": "Brandon Martz",
+      "role": "Undergraduate Student",
+      "joined": "January 2026",
+      "email": "bm80@rice.edu",
+      "links": [],
+      "image": {
+        "src": "/images/2026/01/Brandon_website-1030x1030.jpg",
+        "alt": "Brandon Martz",
+        "width": 1030,
+        "height": 1030
+      },
+      "body": "text/team/brandon-martz.md"
+    },
+    {
+      "id": "tanushree-chakraborty",
+      "name": "Tanushree Chakraborty",
+      "role": "Research Technician",
+      "joined": "March 2026",
+      "email": "tc180@rice.edu",
+      "links": [],
+      "image": {
+        "src": "/images/2026/03/Tanushree-1030x1030.jpg",
+        "alt": "Tanushree Chakraborty",
+        "width": 1030,
+        "height": 1030
+      },
+      "body": "text/team/tanushree-chakraborty.md"
+    },
+    {
+      "id": "arya",
+      "name": "Arya",
+      "role": "Lab Dog",
+      "joined": "January 2024",
+      "email": "",
+      "links": [],
+      "image": {
+        "src": "/images/2024/01/Arya.jpg",
+        "alt": "Arya",
+        "width": 690,
+        "height": 690
+      },
+      "body": "text/team/arya.md"
+    }
+  ]
+}

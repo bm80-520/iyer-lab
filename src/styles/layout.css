@@ -1,0 +1,231 @@
+/* Shared document geometry, navigation and footer. Breakpoints deliberately
+   match main: 767px content, 799px profiles/projects, 867px banner. */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding-inline: var(--container-gutter);
+  margin-inline: auto;
+}
+#main {
+  padding-top: var(--header-height);
+  background: var(--color-content);
+}
+.lab-banner img {
+  width: 100%;
+  display: block;
+}
+.page-content {
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--color-border);
+}
+.article-content {
+  padding-right: calc(var(--container-gutter) * 2);
+}
+.site-header {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: var(--color-paper);
+}
+.header-inner {
+  height: 88px;
+}
+.site-navigation {
+  display: flex;
+  height: 88px;
+  align-items: stretch;
+  margin-left: -13px;
+}
+.site-navigation a {
+  display: flex;
+  align-items: center;
+  padding-inline: 13px;
+  color: var(--color-heading);
+  font: 600 18px var(--font-heading);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-navigation a:hover,
+.site-navigation a[aria-current='page'] {
+  color: var(--color-link-hover);
+}
+.menu-toggle {
+  display: none;
+}
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  padding: 15px 0 30px;
+  background: var(--color-paper);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 20.5%);
+  column-gap: 6%;
+}
+.footer-widget {
+  margin: 30px 0;
+}
+.footer-widget h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 17px 0 8px;
+}
+.footer-widget p {
+  margin: 0.85em 0;
+}
+.footer-contact p {
+  margin: 0;
+}
+.footer-widget img {
+  display: inline;
+  vertical-align: baseline;
+}
+.site-copyright {
+  background: var(--color-heading);
+  color: var(--color-copyright);
+  font-size: 11px;
+  line-height: 24.75px;
+}
+.copyright-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 15px;
+  align-items: center;
+  min-height: 54.75px;
+}
+.site-copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-copyright nav {
+  display: flex;
+}
+.site-copyright nav a {
+  padding: 0 10px;
+  line-height: 10px;
+  border-left: 1px solid var(--color-border);
+}
+.site-copyright nav a:first-child {
+  border: 0;
+}
+@media (max-width: 867px) {
+  .lab-banner .banner-desktop {
+    display: none;
+  }
+}
+@media (min-width: 868px) {
+  .lab-banner .banner-mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --header-height: 82px;
+  }
+  .container {
+    width: 85%;
+    padding-inline: 0;
+  }
+  .page-content {
+    border-top: 1px solid var(--color-border);
+  }
+  .site-header {
+    position: absolute;
+    height: 82px;
+  }
+  .header-inner {
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-toggle {
+    position: relative;
+    z-index: 23;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 25px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .menu-toggle span {
+    height: 3px;
+    background: var(--color-heading);
+    width: 100%;
+    border-radius: 2px;
+    transition:
+      transform 0.2s,
+      opacity 0.2s;
+  }
+  .menu-toggle.is-open {
+    position: fixed;
+    right: 7.5%;
+    top: 28px;
+  }
+  .menu-toggle.is-open span:first-child {
+    transform: translateY(11px) rotate(45deg);
+  }
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.is-open span:last-child {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+  .site-navigation {
+    display: none;
+  }
+  .site-navigation.is-open {
+    display: flex;
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(350px, 100%);
+    height: 100dvh;
+    margin: 0;
+    padding: 100px 40px 40px;
+    flex-direction: column;
+    background: var(--color-paper);
+    z-index: 22;
+    overflow-y: auto;
+  }
+  .site-navigation a {
+    padding: 13px 0;
+    font-size: 18px;
+  }
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 50%);
+    border: 0;
+    z-index: 21;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .footer-widget {
+    margin: 30px 0;
+    padding: 0;
+  }
+  .copyright-inner {
+    display: block;
+  }
+  .site-copyright nav {
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  .article-content {
+    padding-right: 0;
+  }
+}

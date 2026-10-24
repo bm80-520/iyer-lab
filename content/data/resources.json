@@ -1,0 +1,128 @@
+{
+  "gallery": [
+    {
+      "src": "/images/2024/03/Image5-180x180.png",
+      "alt": "Image5",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image5.png"
+    },
+    {
+      "src": "/images/2024/03/Image24-180x180.png",
+      "alt": "Image24",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image24.png"
+    },
+    {
+      "src": "/images/2024/03/Image25-180x180.png",
+      "alt": "Image25",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image25.png"
+    },
+    {
+      "src": "/images/2024/03/Image33-180x180.png",
+      "alt": "Image33",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image33.png"
+    },
+    {
+      "src": "/images/2024/03/Image36-180x180.png",
+      "alt": "Image36",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image36.png"
+    },
+    {
+      "src": "/images/2024/03/Image37-180x180.png",
+      "alt": "Image37",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image37.png"
+    },
+    {
+      "src": "/images/2024/03/Image38-180x180.png",
+      "alt": "Image38",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image38.png"
+    },
+    {
+      "src": "/images/2024/03/Image39-705x705.png",
+      "alt": "Image39",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image39-705x705.png"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sci-comm",
+      "title": "Science Communication",
+      "image": {
+        "src": "/images/2024/02/Science-communication-1-845x684.jpeg",
+        "alt": "business communication",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/1.md"
+    },
+    {
+      "id": "tools",
+      "title": "Reading, Citing, Copywriting, and Imaging Tools",
+      "image": {
+        "src": "/images/2024/02/Reading-citation-etc-845x684.jpeg",
+        "alt": "Student with dyslexia reading a book with the help of a coloured overlay",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/2.md"
+    },
+    {
+      "id": "inspiration",
+      "title": "Inspirational Resources, Thoughts, and Blogs",
+      "image": {
+        "src": "/images/2024/02/Inspirational-845x684.jpeg",
+        "alt": "The hands show an innovative idea.",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/3.md"
+    },
+    {
+      "id": "career",
+      "title": "Career Development Reading and Resources",
+      "image": {
+        "src": "/images/2024/02/Career-development-495-x-400.jpeg",
+        "alt": "Coach motivate to personal development",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/4.md"
+    },
+    {
+      "id": "zebrafish",
+      "title": "Zebrafish Resources",
+      "image": {
+        "src": "/images/2024/02/Zebrafish-resources-845x684.jpeg",
+        "alt": "danio zebrafish swimming isolated on white background, macro photography",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/5.md"
+    },
+    {
+      "id": "outreach",
+      "title": "Diversity, Equity, Inclusion, and Outreach",
+      "image": {
+        "src": "/images/2024/02/DEI-and-outreach-845x684.jpeg",
+        "alt": "Cartoon Crowd, Network Tentacles",
+        "width": 495,
+        "height": 400
+      },
+      "body": "text/resources/6.md"
+    }
+  ]
+}

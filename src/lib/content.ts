@@ -1,17 +1,32 @@
 import 'server-only';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import pages from '../../content/pages.json';
+import { marked } from 'marked';
+import pageData from '../../content/data/pages.json';
+import newsData from '../../content/data/news.json';
 import { withBasePath } from './site';
 
-export { pages };
+export const news = newsData.items;
+export const pages = [
+  ...pageData.filter((page) => page.kind !== 'news'),
+  ...news
+    .filter((item) => item.slug)
+    .map((item) => ({ slug: item.slug!, title: item.title, kind: 'news' })),
+];
 
-export function getNews() {
-  return pages.filter(page => page.kind === 'news').sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+// Markdown is reviewed repository content. Layout and presentation never live
+// in these files; only paragraphs, headings, emphasis, links, and lists do.
+export async function getMarkdown(file: string) {
+  const source = await readFile(path.join(process.cwd(), 'content', file), 'utf8');
+  return renderMarkdown(source);
 }
 
-export async function getPageHtml(file: string) {
-  const html = await readFile(path.join(process.cwd(), 'content/pages', file), 'utf8');
-  // Content is checked-in HTML from the migration, never untrusted user input.
-  return html.replace(/(href|src)="(\/[^"\s]*)"/g, (_, attr, url) => `${attr}="${withBasePath(url)}"`);
+export function renderMarkdown(source: string, inline = false) {
+  const html = inline
+    ? marked.parseInline(source, { async: false })
+    : marked.parse(source, { async: false });
+  return html.replace(
+    /(href|src)="(\/(?!\/)[^"]*)"/g,
+    (_, attr, url) => `${attr}="${withBasePath(url)}"`,
+  );
 }

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "research/lysosomal-projects-1",
+      "title": "How are signals of extracellular stress relayed to lysosomes?",
+      "image": {
+        "src": "/images/2024/02/lysosomal-p1-1030x721.png",
+        "alt": "",
+        "width": 1030,
+        "height": 721
+      },
+      "body": "text/research/lysosomal-projects/1.md",
+      "link": {
+        "label": "Learn More",
+        "href": "https://iyerlaboratory.org/research/how-are-signals-of-extracellular-stress-relayed/"
+      }
+    },
+    {
+      "id": "research/lysosomal-projects-2",
+      "title": "What are the key molecular differences in the endolysosomal pathway between professional and non-professional phagocytic cells?",
+      "image": {
+        "src": "/images/2024/01/lysosomal-p2-1030x721.png",
+        "alt": "",
+        "width": 1030,
+        "height": 721
+      },
+      "body": "text/research/lysosomal-projects/2.md",
+      "link": {
+        "label": "Learn More",
+        "href": "https://iyerlaboratory.org/research/key-molecular-differences-in-the-endolysosomal-pathway/"
+      }
+    }
+  ]
+}
