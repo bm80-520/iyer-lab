@@ -1,0 +1,519 @@
+/* Repeated page patterns. Change one rule here to update every profile,
+   publication, research row, or resource section that uses the same pattern. */
+.button-row {
+  display: inline-block;
+  margin-top: 0;
+  line-height: 1.2;
+}
+.button {
+  float: left;
+  display: inline-block;
+  margin-block: 3px;
+  border: 0;
+  border-bottom: 1px solid var(--color-heading);
+  border-radius: 30px;
+  padding: 12px 16px 10px;
+  background: var(--color-heading);
+  color: white;
+  font-size: 13px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background 0.4s;
+}
+.button:hover {
+  background: var(--color-link-hover);
+  color: white;
+  text-decoration: none;
+}
+.button-small {
+  border-radius: 3px;
+  padding: 9px 10px 7px;
+}
+.button-right {
+  display: flow-root;
+  text-align: right;
+}
+.ruled-heading {
+  display: block;
+  min-height: 49px;
+  padding-bottom: 10px;
+}
+.ruled-heading h2 {
+  float: left;
+  max-width: 100%;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.ruled-heading h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+.ruled-heading > span {
+  display: block;
+  height: 39px;
+  overflow: hidden;
+}
+.ruled-heading > span::after {
+  content: '';
+  display: block;
+  margin: 19px 0 0 15px;
+  border-top: 1px solid var(--color-border);
+}
+.ruled-heading + * {
+  clear: both;
+}
+.research-cards {
+  display: grid;
+  /* Main used a 100.4% strip with 33.3% tracks and a 15px gutter.
+     Keep that fractional width here so its crops and line breaks stay identical. */
+  grid-template-columns: repeat(3, calc(33.4332% - 15px));
+  gap: 15px;
+  padding: 15px 0 15px 15px;
+  overflow: hidden;
+}
+.research-card {
+  position: relative;
+  display: block;
+  aspect-ratio: auto;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+.research-card::before {
+  content: '';
+  display: block;
+  padding-top: calc(80% - 3px);
+}
+.research-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.research-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 35%);
+  transition: background 0.3s;
+}
+.research-card:hover::after {
+  background: rgb(0 0 0 / 10%);
+}
+.research-card h3 {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  transform: translateY(-50%);
+  margin: 0;
+  color: white;
+  text-align: center;
+  line-height: 1.3;
+  z-index: 1;
+}
+.home-columns {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  gap: var(--column-gap);
+  border: 0;
+}
+.resource-links {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.publication-list {
+  font-size: var(--text-size);
+  line-height: 1.65;
+}
+.publication-title {
+  color: var(--color-heading);
+}
+.research-row {
+  display: flow-root;
+  margin-bottom: 20px;
+}
+.research-image,
+.research-description {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.research-image img {
+  display: block;
+  width: calc(100% - 15px);
+  margin: 5px 15px 0 0;
+  border-radius: 3px;
+  box-shadow: var(--image-shadow);
+}
+.project-page h2 {
+  letter-spacing: normal;
+}
+.research-page {
+  padding-bottom: 0;
+}
+.research-rows {
+  display: flow-root;
+}
+
+.team-profile {
+  display: flow-root;
+  margin-bottom: 60px;
+}
+.profile-image {
+  float: left;
+  width: 30%;
+  padding: 10px;
+}
+.profile-image img {
+  display: block;
+  width: 100%;
+  box-shadow: var(--image-shadow);
+}
+.profile-description {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+.profile-name {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+.profile-links {
+  min-height: 24.75px;
+}
+.profile-links a {
+  display: inline-block;
+  margin-right: 8px;
+}
+.profile-bio {
+  padding-top: 2px;
+}
+.publications-sections {
+  padding-top: 20px;
+}
+.publications-sections > section + section h2 {
+  padding-top: 30px;
+}
+.resource-section {
+  display: grid;
+  grid-template-columns: 36.4% 57.6%;
+  gap: var(--column-gap);
+  margin-top: 50px;
+  margin-bottom: 0;
+  scroll-margin-top: 100px;
+}
+.resource-section + .resource-section {
+  margin-top: 60px;
+}
+.resource-image img {
+  display: block;
+}
+.primer-section {
+  display: grid;
+  grid-template-columns: 29.333% 64.667%;
+  column-gap: var(--column-gap);
+  align-items: center;
+  margin-top: 50px;
+}
+.primer-section.is-reversed {
+  grid-template-columns: 64.667% 29.333%;
+}
+.primer-section.is-reversed .primer-image {
+  order: 2;
+}
+.primer-image img {
+  display: block;
+  margin-inline: auto;
+}
+.primer-section + .primer-section {
+  margin-top: 50px;
+}
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.opportunity {
+  position: relative;
+  min-height: 343.5px;
+  text-align: center;
+  perspective: 1000px;
+}
+.opportunity-front,
+.opportunity-copy {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+.opportunity-front {
+  background: white;
+  border: 1px solid var(--color-border);
+}
+.opportunity-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  color: black;
+  padding: 45px;
+  transform: rotateY(180deg);
+  overflow-wrap: normal;
+}
+.opportunity-copy .prose {
+  overflow-wrap: normal;
+}
+.opportunity:hover .opportunity-front,
+.opportunity:focus .opportunity-front {
+  transform: rotateY(180deg);
+}
+.opportunity:hover .opportunity-copy,
+.opportunity:focus .opportunity-copy {
+  transform: rotateY(360deg);
+}
+.news-grid {
+  --news-columns: 4;
+  --news-track-scale: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--news-columns), 1fr);
+  align-items: start;
+  gap: 15px;
+  padding: 15px 0 0 15px;
+}
+.news-grid.is-positioned {
+  display: block;
+}
+.news-grid.is-positioned .news-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.news-card img {
+  width: 100%;
+  display: block;
+}
+.news-caption {
+  position: relative;
+  background: var(--color-content);
+  padding: 20px;
+}
+.news-caption::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background: inherit;
+}
+.news-caption h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.news-caption time {
+  display: block;
+  color: var(--color-ink);
+  font-size: 11px;
+  line-height: 24.75px;
+}
+.load-more {
+  display: block;
+  margin: 0 15px 15px 0;
+  padding: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  background: var(--color-content);
+  text-transform: uppercase;
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.news-bottom-space {
+  height: 102px;
+  border-top: 1px solid var(--color-border);
+}
+.news-article article > a {
+  display: block;
+  padding: 0 0 10px 131px;
+}
+.news-article article > a img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+.news-article h1 {
+  line-height: 1.3;
+  margin-bottom: 14px;
+  border-bottom: 1px solid transparent;
+}
+.news-article time {
+  position: relative;
+  top: -8px;
+  line-height: 24.75px;
+  color: var(--color-muted);
+  font-size: 12.15px;
+}
+.protected-resources form {
+  margin: 0 0 23px;
+}
+.protected-resources label {
+  display: block;
+  font-size: 13.8px;
+}
+.protected-resources input[type='password'] {
+  display: block;
+  border: 1px solid var(--color-border);
+  background: #f8f8f8;
+  border-radius: 2px;
+  padding: 8px;
+  font-size: 13.8px;
+  line-height: 19px;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.protected-resources input[type='submit'] {
+  background: var(--color-heading);
+  color: white;
+  border: 0;
+  padding: 9px 22px;
+  font:
+    13.3333px/15px Arial,
+    sans-serif;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 989px) {
+  .news-grid {
+    --news-columns: 3;
+  }
+}
+@media (max-width: 799px) {
+  .research-image,
+  .research-description {
+    float: none;
+    width: 100%;
+  }
+  .research-image {
+    padding: 0 0 20px;
+  }
+  .profile-image,
+  .profile-description {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .profile-image img {
+    display: inline;
+  }
+}
+@media (max-width: 767px) {
+  .home-columns {
+    display: block;
+  }
+  .home-columns > section {
+    display: flow-root;
+    margin-bottom: 20px;
+  }
+  /* Main's mobile profile rows exclude the final paragraph margin and the
+     surrounding team column supplies the last 20px of spacing. */
+  .profile-bio .prose > :last-child {
+    margin-bottom: 0;
+  }
+  .team-list {
+    padding-bottom: 20px;
+  }
+  .research-cards {
+    grid-template-columns: calc(100.4% - 15px);
+    padding-right: 0;
+  }
+  .research-card {
+    aspect-ratio: auto;
+  }
+  .resource-section {
+    display: block;
+    margin-top: 70px;
+    padding-bottom: 20px;
+  }
+  .resource-image {
+    margin-bottom: 20px;
+  }
+  .primer-section,
+  .primer-section.is-reversed {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .primer-section.is-reversed .primer-image {
+    order: 2;
+  }
+  .primer-section > .prose {
+    margin-bottom: 20px;
+  }
+  .primer-image {
+    margin-bottom: 20px;
+  }
+  .opportunity-grid {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .opportunity {
+    min-height: 343.5px;
+  }
+  .opportunity-copy {
+    padding: 45px;
+  }
+  .news-grid {
+    --news-columns: 2;
+  }
+}
+@media (max-width: 479px) {
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+  .news-grid {
+    --news-columns: 1;
+    /* Match the original single-column image strip's fractional width. */
+    --news-track-scale: 1.004;
+    padding-right: 0;
+  }
+}
+
+/* Preserve the breathing room around the original article footer/divider,
+   without retaining empty WordPress metadata and plugin markup. */
+.project-page::after {
+  content: '';
+  display: block;
+  height: 31px;
+}
+.news-article article::after {
+  content: '';
+  display: block;
+  height: 130px;
+}
+@media (max-width: 767px) {
+  .research-page .research-rows {
+    margin-top: 21px;
+  }
+  .publications-sections {
+    padding-top: 40px;
+  }
+  .primer-page {
+    padding-bottom: 70px;
+  }
+  .project-page::after {
+    height: 110px;
+  }
+  .news-article article > a {
+    padding-left: 0;
+  }
+  .news-article article::after {
+    height: 110px;
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "gallery": [
+    {
+      "src": "/images/2024/03/Image10-705x705.png",
+      "alt": "Image10",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image10-705x705.png"
+    },
+    {
+      "src": "/images/2024/03/Image34-180x180.png",
+      "alt": "Image34",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image34-180x180.png"
+    },
+    {
+      "src": "/images/2024/03/Image35-180x180.png",
+      "alt": "Image35",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image35-180x180.png"
+    },
+    {
+      "src": "/images/2024/03/Image40-180x180.png",
+      "alt": "Image40",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image40-180x180.png"
+    },
+    {
+      "src": "/images/2024/03/Image41-180x180.png",
+      "alt": "Image41",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image41-180x180.png"
+    },
+    {
+      "src": "/images/2024/03/Image42-705x705.png",
+      "alt": "Image42",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image42-705x705.png"
+    },
+    {
+      "src": "/images/2024/03/Image43-705x705.png",
+      "alt": "Image43",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image43-705x705.png"
+    },
+    {
+      "src": "/images/2024/03/Image44-705x705.png",
+      "alt": "Image44",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image44-705x705.png"
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opportunity-1",
+      "body": "text/opportunities/1.md"
+    },
+    {
+      "id": "opportunity-2",
+      "body": "text/opportunities/2.md"
+    },
+    {
+      "id": "opportunity-3",
+      "body": "text/opportunities/3.md"
+    },
+    {
+      "id": "opportunity-4",
+      "body": "text/opportunities/4.md"
+    }
+  ]
+}

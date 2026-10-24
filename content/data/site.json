@@ -1,0 +1,90 @@
+{
+  "title": "Iyer Lab – Cellular and Developmental Neuroimmunology – Rice University",
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Research",
+      "href": "/research/"
+    },
+    {
+      "label": "Publications",
+      "href": "/publications/"
+    },
+    {
+      "label": "Team",
+      "href": "/team/"
+    },
+    {
+      "label": "Resources",
+      "href": "/resources/"
+    },
+    {
+      "label": "Lab News",
+      "href": "/lab-news/"
+    },
+    {
+      "label": "Join our shoal!",
+      "href": "/join-our-shoal/"
+    }
+  ],
+  "banner": {
+    "desktop": {
+      "src": "/images/2024/03/Iyer_lab-3-1.svg",
+      "alt": "banner",
+      "width": 1500,
+      "height": 206
+    },
+    "mobile": {
+      "src": "/images/2024/03/Iyer_lab_400x310-3-1.svg",
+      "alt": "banner",
+      "width": 400,
+      "height": 310
+    }
+  },
+  "footer": {
+    "biosciences": {
+      "src": "/images/2024/01/Rice-SNS-Biosciences.png",
+      "alt": "Rice SNS Biosciences",
+      "width": 848,
+      "height": 233
+    },
+    "campus": {
+      "src": "/images/2024/03/rice-university-for-footer-300x169.jpg",
+      "alt": "rice university for footer",
+      "width": 300,
+      "height": 169
+    },
+    "linksTitle": "Links",
+    "links": [
+      {
+        "label": "Rice BCB Graduate Program",
+        "href": "https://biosciences.rice.edu/biochemistry-and-cell-biology-graduate-program"
+      },
+      {
+        "label": "Iyer Lab Biosciences Profile",
+        "href": "https://profiles.rice.edu/faculty/harini-iyer"
+      }
+    ],
+    "contactTitle": "Contact Us",
+    "address": [
+      "6100 Main Street",
+      "George R. Brown Hall, MS-140",
+      "Houston, TX 77005",
+      "(713) 348-3062"
+    ],
+    "copyright": "© Copyright Iyer Lab. Logo art by [Ellen Bouchard](https://www.linkedin.com/in/ellen-bouchard?trk=public_post_follow-view-profile). Site by [Academic Web Pages](https://www.academicwebpages.com)",
+    "linksInternal": [
+      {
+        "label": "Iyer Lab Internal",
+        "href": "/iyer-lab-resources/"
+      },
+      {
+        "label": "Login",
+        "href": "https://iyerlaboratory.org/wp-login.php"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": "research/microglia-and-brain-disorders-1",
+      "title": "Can we gain insights into the biology of microglia by studying disease-associated genes?",
+      "image": {
+        "src": "/images/2024/02/microglia-p1-1030x721.png",
+        "alt": "",
+        "width": 1030,
+        "height": 721
+      },
+      "body": "text/research/microglia-and-brain-disorders/1.md",
+      "link": {
+        "label": "Learn More",
+        "href": "https://iyerlaboratory.org/research/can-we-gain-insights-into-the-biology-of-microglia/"
+      }
+    },
+    {
+      "id": "research/microglia-and-brain-disorders-2",
+      "title": "Are there conserved neuroimmune signatures between pediatric and adult neurodegenerative disorders?",
+      "image": {
+        "src": "/images/2024/01/microglia-p-2-1030x721.png",
+        "alt": "",
+        "width": 1030,
+        "height": 721
+      },
+      "body": "text/research/microglia-and-brain-disorders/2.md",
+      "link": {
+        "label": "Learn More",
+        "href": "https://iyerlaboratory.org/research/are-there-conserved-neuroimmune-signatures/"
+      }
+    }
+  ]
+}

@@ -4,11 +4,24 @@ import path from 'node:path';
 
 const root = path.resolve('out');
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.pdf': 'application/pdf', '.woff2': 'font/woff2' };
+const types = {
+  '.html': 'text/html',
+  '.css': 'text/css',
+  '.js': 'text/javascript',
+  '.json': 'application/json',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.pdf': 'application/pdf',
+  '.woff2': 'font/woff2',
+};
 createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
-    if (basePath && pathname !== basePath && !pathname.startsWith(`${basePath}/`)) throw new Error('Wrong base path');
+    if (basePath && pathname !== basePath && !pathname.startsWith(`${basePath}/`))
+      throw new Error('Wrong base path');
     let file = path.resolve(root, `.${pathname.slice(basePath.length) || '/'}`);
     if (file !== root && !file.startsWith(`${root}${path.sep}`)) throw new Error('Invalid path');
     if ((await stat(file)).isDirectory()) file = path.join(file, 'index.html');
