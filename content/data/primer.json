@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "primer-1",
+      "image": {
+        "src": "/images/2024/01/primer-gree.png",
+        "alt": "primer green",
+        "width": 300,
+        "height": 300
+      },
+      "reverse": false,
+      "body": "text/research/primer/1.md"
+    },
+    {
+      "id": "primer-2",
+      "image": {
+        "src": "/images/2024/01/primer-orange.png",
+        "alt": "primer orange",
+        "width": 300,
+        "height": 300
+      },
+      "reverse": true,
+      "body": "text/research/primer/2.md"
+    },
+    {
+      "id": "primer-3",
+      "image": {
+        "src": "/images/2024/01/Icons-for-primer-blue.png",
+        "alt": "primer red",
+        "width": 300,
+        "height": 300
+      },
+      "reverse": false,
+      "body": "text/research/primer/3.md"
+    },
+    {
+      "id": "primer-4",
+      "image": {
+        "src": "/images/2024/01/primer-blue.png",
+        "alt": "primer blue",
+        "width": 300,
+        "height": 300
+      },
+      "reverse": true,
+      "body": "text/research/primer/4.md"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "notice": "This content is password-protected. To view it, please enter the password below.",
+  "action": "https://iyerlaboratory.org/wp-login.php?action=postpass",
+  "redirect": "https://iyerlaboratory.org/iyer-lab-resources/",
+  "passwordLabel": "Password:",
+  "submitLabel": "Enter"
+}

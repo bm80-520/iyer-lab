@@ -1,0 +1,112 @@
+/* The five faces mirror main's font weights; the small local font files are
+   declared in fonts.css so deployment under a project path also works. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: var(--text-size)/var(--text-leading) var(--font-body);
+  -webkit-text-size-adjust: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 var(--heading-space);
+  color: var(--color-heading);
+  font-family: var(--font-heading);
+  font-weight: var(--heading-weight);
+}
+h1 {
+  font-size: var(--heading-1-size);
+  line-height: 1.1;
+}
+h2 {
+  letter-spacing: 1px;
+  font-size: var(--heading-2-size);
+  line-height: 1.5;
+}
+h3 {
+  font-size: var(--heading-3-size);
+  line-height: 1.1;
+}
+p {
+  margin: var(--paragraph-space) 0;
+}
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-link-hover);
+  outline-offset: 4px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+ul,
+ol {
+  margin: 0 0 20px 7px;
+  padding: 0;
+}
+ul {
+  list-style: disc outside;
+}
+ol {
+  list-style: decimal outside;
+}
+li {
+  margin-left: 1em;
+  padding: 3px 0;
+}
+strong,
+b {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+.prose {
+  overflow-wrap: break-word;
+}
+.prose img {
+  display: block;
+}
+.prose blockquote {
+  margin: 20px;
+}
+.prose sub,
+.prose sup {
+  line-height: 0;
+}
+@media (min-width: 800px) {
+  a {
+    text-decoration: underline;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "",
+    "title": "Iyer Lab – Cellular and Developmental Neuroimmunology – Rice University",
+    "kind": "page"
+  },
+  {
+    "slug": "iyer-lab-resources",
+    "title": "Iyer Lab Resources",
+    "kind": "page"
+  },
+  {
+    "slug": "join-our-shoal",
+    "title": "Join our shoal!",
+    "kind": "page"
+  },
+  {
+    "slug": "lab-news",
+    "title": "Lab News",
+    "kind": "page"
+  },
+  {
+    "slug": "publications",
+    "title": "Publications",
+    "kind": "page"
+  },
+  {
+    "slug": "research",
+    "title": "Research",
+    "kind": "page"
+  },
+  {
+    "slug": "research/lysosomal-projects",
+    "title": "Explore our Lysosomal Biology-Related Projects",
+    "kind": "page"
+  },
+  {
+    "slug": "research/microglia-and-brain-disorders",
+    "title": "Delve into our research on Microglia and Brain Disorders",
+    "kind": "page"
+  },
+  {
+    "slug": "research/primer",
+    "title": "Primer: Read about why we are captivated by microglia",
+    "kind": "page"
+  },
+  {
+    "slug": "resources",
+    "title": "Resources",
+    "kind": "page"
+  },
+  {
+    "slug": "team",
+    "title": "Team",
+    "kind": "page"
+  }
+]

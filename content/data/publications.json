@@ -1,0 +1,152 @@
+{
+  "gallery": [
+    {
+      "src": "/images/2024/03/Image8-180x180.png",
+      "alt": "Image8",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image8.png"
+    },
+    {
+      "src": "/images/2024/03/Image9-180x180.png",
+      "alt": "Image9",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image9.png"
+    },
+    {
+      "src": "/images/2024/03/Image11-180x180.png",
+      "alt": "Image11",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image11.png"
+    },
+    {
+      "src": "/images/2024/03/Image14-180x180.png",
+      "alt": "Image14",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image14.png"
+    },
+    {
+      "src": "/images/2024/03/Image17-180x180.png",
+      "alt": "Image17",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image17.png"
+    },
+    {
+      "src": "/images/2024/03/Image18-180x180.png",
+      "alt": "Image18",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image18.png"
+    },
+    {
+      "src": "/images/2024/03/Image19-180x180.png",
+      "alt": "Image19",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image19.png"
+    },
+    {
+      "src": "/images/2024/03/Image20-180x180.png",
+      "alt": "Image20",
+      "width": 180,
+      "height": 180,
+      "full": "/images/2024/03/Image20.png"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Selected Publications",
+      "items": [
+        {
+          "authors": "Gallman, K., Ricemeyer, E., Rastogi A., X. M., **Mendez Scolari, E.,** Duboue, E.R., Rohner, N., **Iyer, H.,** Warren, W.C., Keene, A.C. 2026-05-23 18:46:56.",
+          "title": "A comparative brain atlas of Mexican cavefish identifies naturally-occurring changes in cellular composition and gene expression..",
+          "citation": "*bioRxiv* doi: 10.64898/2026.05.12.723532."
+        },
+        {
+          "authors": "**Mendez Scolari, E., Amanyi,** O.K., Rastogi, A., Duboue, E.R., Keene, A.C., **Iyer, H.** 2026-04-15 10:22:43.",
+          "title": "Evolved differences in microglial cell biology between surface and cave populations of *Astyanax mexicanus*.",
+          "citation": "*bioRxiv* doi: 10.64898/2026.04.11.717796."
+        },
+        {
+          "authors": "**Iyer, H.**, Benoist, C., Bilbo, S.D., Boulanger, L.M., Burton, M.D., Daniels, B.P., Deczkowska, A., Flajnik, M.F., Gareau, M.G., Grace, P.M., Irazoqui, J.E., Reynolds, T.L., Rosi, S., Salinas, I., Schaefer, A., Sokol, C.L., Williams, D.W., and Klein, R.S. 2025-01-30 09:04:59.",
+          "title": "Systems Neuroimmunology: Current Bottlenecks, Research Priorities and Future Directions.",
+          "citation": "*Nat. Immunol.* 2025. 26(3):325-329. doi: 10.1038/s41590-025-02092-z. PMID: 39939753; PMCID: PMC12016954. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/39939753/)\\]"
+        },
+        {
+          "authors": "**Iyer, H.**, Talbot, W.S. 2024-02-02 00:00:00.",
+          "title": "Chloride transporter ClC-7 is essential for phagocytic clearance by microglia.",
+          "citation": "*J. Cell Sci.* 2024. 137(4): jcs261616. doi: 10.1242/jcs.261616. PMID: 38294065; PMCID: PMC10911276. \\[[PDF](/images/2024/03/Iyer_JCS.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/38294065/)\\]"
+        },
+        {
+          "authors": "**Iyer, H.**, Shen, K., Meireles, A.M., Talbot, W.S. 2022-09-02 00:00:00.",
+          "title": "A lysosomal regulatory circuit essential for the development and function of microglia.",
+          "citation": "*Sci. Adv.* 2022. 8(35):eabp8321. doi: 10.1126/sciadv.abp8321. PMID: 36044568; PMCID: PMC9432849. \\[[PDF](/images/2024/03/Iyer_2022_SciAdv-compressed.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/36044568)\\]"
+        },
+        {
+          "authors": "Gan, L., Seki, A., Shen, K., **Iyer, H.**, Han, K., Hayer, A., Wollman, R., Ge, X., Lin, J.R., Dey, G., Talbot, W.S., Meyer, T. 2019-05-21 00:00:00.",
+          "title": "The lysosomal GPCR-like protein regulates Rag and mTORC1 localization and activity.",
+          "citation": "*Nat. Cell Biol.* 2019. 21(5):614-626. doi: 10.1038/s41556-019-0321-6. PMID: 31036939; PMCID: PMC6649673. \\[[PDF](/images/2024/02/Gan_NCB.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/31036939)\\]"
+        },
+        {
+          "authors": "Meireles, A.M., Shen, K., Zoupi, L., **Iyer, H.**, Bouchard, E.L., Williams, A., Talbot, W.S. 2018-11-05 00:00:00.",
+          "title": "The lysosomal transcription factor TFEB regulates myelination downstream of the Rag-Ragulator complex.",
+          "citation": "*Dev. Cell* 2018. 47(3):319-330. doi: 10.1016/j.devcel.2018.10.003. PMID: 30399334; PMCID: PMC6250074. \\[[PDF](/images/2024/02/Meireles_DevCell.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/30399334)\\]"
+        }
+      ]
+    },
+    {
+      "title": "Other Publications",
+      "items": [
+        {
+          "authors": "**Iyer, H.**, Issigonis, M., Sharma, P.P., Extavour, C.G., P.A. Newmark. 2016-06-21 00:00:00.",
+          "title": "A premeiotic function for *boule* in the planarian *Schmidtea mediterranea*.",
+          "citation": "*Proc. Natl. Acad. Sci. U.S.A.* 2016. 113(25): E3509–18. doi: 10.1073/pnas.1521341113. PMID: 27330085; PMCID: PMC4922153. \\[[PDF](/images/2024/03/Iyer_2016_PNAS-compressed.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27330085)\\]"
+        },
+        {
+          "authors": "**Iyer, H.**, Collins III, J.J., P.A. Newmark. 2016-06-15 00:00:00.",
+          "title": "NF-YB regulates spermatogonial stem cell self-renewal and proliferation in the planarian *Schmidtea mediterranea*.",
+          "citation": "*PLoS Genet.* 2016. 12(6): e1006109. doi: 10.1371/journal.pgen.1006109. PMID: 27304889; PMCID: PMC4909293. \\[[PDF](/images/2024/02/Iyer_PLOSGen.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27304889)\\]"
+        },
+        {
+          "authors": "Collins III, J.J., Wendt, G.R., **Iyer, H.**, P. A. Newmark. 2016-03-22 00:00:00.",
+          "title": "Stem cell progeny contribute to the schistosome host-parasite interface.",
+          "citation": "*eLife* 2016. 5:243. doi: 10.7554/eLife.12473. PMID: 27003592; PMCID: PMC4841766. \\[[PDF](/images/2024/02/Collins_eLife.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27003592/)\\]"
+        },
+        {
+          "authors": "Naik, M., Raichurkar, A., Bandodkar, B.S., Varun, B.V., Bhat, S., Kalkhambkar, R., Murugan, K., Menon, R., Bhat, J., Paul, B., **Iyer, H.**, et al. 2015-01-22 00:00:00.",
+          "title": "Structure Guided Lead Generation for *M. tuberculosis* Thymidylate Kinase (Mtb TMK): Discovery of 3-Cyanopyridone and 1,6-Naphthyridin-2-one as Potent Inhibitors.",
+          "citation": "*J. Med. Chem.* 2015. 58(2): 753-66. doi: 10.1021/jm5012947. PMID: 25486447. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/25486447)\\]"
+        },
+        {
+          "authors": "Balasubramanian, V., Solapure, S., **Iyer, H.**, et al. 2013-11-04 00:00:00.",
+          "title": "Bactericidal activity and mechanism of action of AZD5847, a novel oxazolidinone for treatment of tuberculosis.",
+          "citation": "*Antimicrob. Agents Chemother.* 2014. 58(1): 495-502. doi: 10.1128/AAC.01903-13. PMID: 24189255; PMCID: PMC3910779. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/24189255)\\]"
+        },
+        {
+          "authors": "Collins III, J.J., Wang, B., Lambrus, B.G., Tharp, M., **Iyer, H.**, and P. A. Newmark. 2013-02-28 00:00:00.",
+          "title": "Adult somatic stem cells in the human parasite, *Schistosoma mansoni*.",
+          "citation": "*Nature* 2013. 494: 476-479. doi: 10.1038/nature11924. PMID: 23426263; PMCID: PMC3586782. \\[[PDF](/images/2024/02/Collins_Nature.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/23426263)\\]"
+        },
+        {
+          "authors": "Gising, J., Nilsson, M.T., Odell, L.R., Yahiaoui, S., Lindh, M., **Iyer, H.**, et al. 2012-03-22 00:00:00.",
+          "title": "Trisubstituted imidazoles as *Mycobacterium tuberculosis* glutamine synthetase inhibitors.",
+          "citation": "*J. Med. Chem.* 2012. 55(6): 2894-8. doi: 10.1021/jm201212h. PMID: 22369127; PMCID: PMC3381009. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/22369127)\\]"
+        },
+        {
+          "authors": "Andaloussi, M., Lindh, M., Björkelid, C., Suresh, S., Wieckowska, A., **Iyer, H.**, et al. 2011-09-15 00:00:00.",
+          "title": "Substitution of the phosphonic acid and hydroxamic acid functionalities of the DXR inhibitor FR900098: An attempt to improve the activity against *Mycobacterium tuberculosis*.",
+          "citation": "*Bioorg. Med. Chem. Lett.* 2011. 21(18): 5403-7. doi: 10.1016/j.bmcl.2011.07.005. PMID: 21824775. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/21824775)\\]"
+        },
+        {
+          "authors": "Andaloussi, M., Henriksson, L.M., Więckowska, A., Lindh, M., Björkelid, C., Larsson, A.M., Suresh, S., **Iyer, H.**, et al. 2011-07-28 00:00:00.",
+          "title": "Design, synthesis, and X-ray crystallographic studies of α-aryl substituted fosmidomycin analogues as inhibitors of *Mycobacterium tuberculosis* 1-deoxy-D-xylulose 5-phosphate reductoisomerase.",
+          "citation": "*J. Med. Chem.* 2011. 54(14): 4964-76. doi: 10.1021/jm2000085. PMID: 21678907. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/21678907)\\]"
+        }
+      ]
+    }
+  ]
+}
