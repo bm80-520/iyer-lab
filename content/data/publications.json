@@ -62,11 +62,6 @@
       "title": "Selected Publications",
       "items": [
         {
-          "authors": "John Smith",
-          "title": "Testing this",
-          "citation": "Gold tablet"
-        },
-        {
           "authors": "Gallman, K., Ricemeyer, E., Rastogi A., X. M., **Mendez Scolari, E.,** Duboue, E.R., Rohner, N., **Iyer, H.,** Warren, W.C., Keene, A.C. 2026-05-23 18:46:56.",
           "title": "A comparative brain atlas of Mexican cavefish identifies naturally-occurring changes in cellular composition and gene expression..",
           "citation": "*bioRxiv* doi: 10.64898/2026.05.12.723532."
