@@ -2,33 +2,29 @@
   "items": [
     {
       "id": "research/microglia-and-brain-disorders-1",
+      "anchor": "disease-associated-genes",
+      "navLabel": "Disease-associated genes in microglia",
       "title": "Can we gain insights into the biology of microglia by studying disease-associated genes?",
       "image": {
         "src": "/images/2024/02/microglia-p1-1030x721.png",
-        "alt": "",
+        "alt": "Diagram of the approach: curate genes implicated in brain disorders from patient genome-wide association studies, identify zebrafish homologs, perform large-scale CRISPR mutagenesis, then assay zebrafish mutants for microglia formation and function, the endolysosomal pathway, gene function in microglia and macrophages, and working memory and executive function.",
         "width": 1030,
         "height": 721
       },
-      "body": "text/research/microglia-and-brain-disorders/1.md",
-      "link": {
-        "label": "Learn More",
-        "href": "https://iyerlaboratory.org/research/can-we-gain-insights-into-the-biology-of-microglia/"
-      }
+      "body": "text/research/microglia-and-brain-disorders/1.md"
     },
     {
       "id": "research/microglia-and-brain-disorders-2",
+      "anchor": "neuroimmune-signatures",
+      "navLabel": "Pediatric and adult neurodegeneration",
       "title": "Are there conserved neuroimmune signatures between pediatric and adult neurodegenerative disorders?",
       "image": {
         "src": "/images/2024/01/microglia-p-2-1030x721.png",
-        "alt": "",
+        "alt": "Diagram: in lysosomal storage disorders, lysosomal dysfunction leads to accumulation of toxic metabolites and is almost always accompanied by neurodegeneration. The approach uses “humanized” zebrafish carrying coding mutations implicated in these disorders, spatio-temporal analysis of the onset of neuroinflammation, and drug screens to alleviate neuroinflammation and restore neuronal function.",
         "width": 1030,
         "height": 721
       },
-      "body": "text/research/microglia-and-brain-disorders/2.md",
-      "link": {
-        "label": "Learn More",
-        "href": "https://iyerlaboratory.org/research/are-there-conserved-neuroimmune-signatures/"
-      }
+      "body": "text/research/microglia-and-brain-disorders/2.md"
     }
   ]
 }

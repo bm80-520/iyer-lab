@@ -1,10 +1,13 @@
 import Link from 'next/link';
 import site from '../../content/data/site.json';
+import { loadSiteContent } from '@/lib/cms/snapshot';
 import { InlineMarkdown } from './markdown';
 import { SiteImage } from './site-image';
+import { SiteTextBlock } from './live-content';
 
-export function SiteFooter() {
+export async function SiteFooter() {
   const footer = site.footer;
+  const { text } = await loadSiteContent();
   return (
     <>
       <footer className="site-footer" id="footer">
@@ -27,9 +30,7 @@ export function SiteFooter() {
           </section>
           <section className="footer-widget footer-contact">
             <h3>{footer.contactTitle}</h3>
-            {footer.address.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
+            <SiteTextBlock textKey="footer.contact" initial={text} format="lines" />
           </section>
           <section className="footer-widget">
             <p>
@@ -44,14 +45,14 @@ export function SiteFooter() {
             <InlineMarkdown>{footer.copyright}</InlineMarkdown>
           </span>
           <nav aria-label="Footer navigation">
-            {footer.linksInternal.map((link) =>
-              link.href.startsWith('/') ? (
-                <Link key={link.href} href={link.href}>
-                  {link.label}
+            {footer.linksInternal.map((item) =>
+              item.href.startsWith('/') ? (
+                <Link key={item.label} href={item.href}>
+                  {item.label}
                 </Link>
               ) : (
-                <a key={link.href} href={link.href}>
-                  {link.label}
+                <a key={item.label} href={item.href}>
+                  {item.label}
                 </a>
               ),
             )}

@@ -47,6 +47,7 @@
   font: 600 18px var(--font-heading);
   text-decoration: none;
   white-space: nowrap;
+  transition: color var(--transition);
 }
 .site-navigation a:hover,
 .site-navigation a[aria-current='page'] {
@@ -128,6 +129,8 @@
 @media (max-width: 767px) {
   :root {
     --header-height: 82px;
+    /* The mobile header scrolls away, so targets need only a small margin. */
+    --anchor-offset: 20px;
   }
   .container {
     width: 85%;

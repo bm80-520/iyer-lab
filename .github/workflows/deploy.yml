@@ -5,6 +5,11 @@ on:
     branches: [main, master]
   pull_request:
   workflow_dispatch:
+  # Content edited in the dashboard is live immediately (pages read Supabase in
+  # the browser). The nightly rebuild refreshes the copy baked into the HTML,
+  # which search engines and visitors without JavaScript see.
+  schedule:
+    - cron: '17 9 * * *'
 
 permissions:
   contents: read
@@ -33,6 +38,10 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path || '' }}
+          # Repository variables (Settings → Secrets and variables → Actions →
+          # Variables). Both are public by design; never add a secret key here.
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
       - name: Check exported links and assets
         run: npm run check:export
         env:

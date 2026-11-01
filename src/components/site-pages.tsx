@@ -2,23 +2,35 @@ import Link from 'next/link';
 import home from '../../content/data/home.json';
 import research from '../../content/data/research.json';
 import primer from '../../content/data/primer.json';
-import lysosomal from '../../content/data/lysosomal-projects.json';
-import disorders from '../../content/data/microglia-and-brain-disorders.json';
 import team from '../../content/data/team.json';
-import publications from '../../content/data/publications.json';
+import publicationData from '../../content/data/publications.json';
 import resources from '../../content/data/resources.json';
 import recruitment from '../../content/data/recruitment.json';
 import protectedResources from '../../content/data/protected-resources.json';
-import { news } from '@/lib/content';
+import { loadSiteContent } from '@/lib/cms/snapshot';
+import { recruitmentKeys, resourceTextKey } from '@/lib/cms/site-text';
 import { Gallery } from './gallery';
 import { Slideshow } from './slideshow';
 import { SiteImage } from './site-image';
 import { Markdown } from './markdown';
-import { PublicationList, ResearchRows, RuledHeading } from './content-sections';
-import { NewsGrid } from './news-grid';
-import { withBasePath } from '@/lib/site';
+import { RuledHeading } from './content-sections';
+import {
+  HomePublications,
+  LiveNewsArticle,
+  NewsList,
+  PublicationsByYear,
+  ResearchOverviewText,
+  ResearchTopics,
+  SiteTextBlock,
+  TeamList,
+} from './live-content';
 
-export function HomePage() {
+// Page layouts. Images, galleries and page structure come from content/data;
+// the content managed in the dashboard comes from the build-time snapshot and
+// is refreshed in the browser by the components in live-content.tsx.
+
+export async function HomePage() {
+  const content = await loadSiteContent();
   return (
     <>
       <Slideshow images={home.slides} />
@@ -43,7 +55,7 @@ export function HomePage() {
         </section>
         <section>
           <RuledHeading href="/publications/">Publications</RuledHeading>
-          <PublicationList items={publications.sections[0].items.slice(0, 3)} />
+          <HomePublications initial={content.publications} />
           <div className="button-row button-right">
             <Link href="/publications/" className="button button-small">
               All Publications
@@ -55,19 +67,26 @@ export function HomePage() {
   );
 }
 
-export function ResearchPage() {
+export async function ResearchPage() {
+  const content = await loadSiteContent();
+  const { overview } = research;
   return (
     <div className="container page-content research-page">
       <Gallery images={research.gallery} hideOnMobile />
-      <ResearchRows items={research.items} />
-    </div>
-  );
-}
-
-export function ProjectPage({ kind }: { kind: 'lysosomal' | 'disorders' }) {
-  return (
-    <div className="container page-content article-content project-page">
-      <ResearchRows items={(kind === 'lysosomal' ? lysosomal : disorders).items} />
+      <section className="research-row research-overview">
+        <div className="research-image">
+          <SiteImage image={overview.image} />
+        </div>
+        <div className="research-description">
+          <ResearchOverviewText initial={content.text} />
+          <div className="button-row">
+            <Link className="button" href={overview.link.href}>
+              {overview.link.label}
+            </Link>
+          </div>
+        </div>
+      </section>
+      <ResearchTopics initial={content.research} title={research.topicsTitle} />
     </div>
   );
 }
@@ -87,62 +106,28 @@ export function PrimerPage() {
   );
 }
 
-export function TeamPage() {
+export async function TeamPage() {
+  const content = await loadSiteContent();
   return (
     <div className="container page-content">
       <Gallery images={team.gallery} />
-      <div className="team-list">
-        {team.members.map((member) => (
-          <section className="team-profile" key={member.id}>
-            <div className="profile-image">
-              <SiteImage image={member.image} />
-            </div>
-            <div className="profile-description">
-              <div className="profile-name">
-                {member.name}
-                <br />
-                {member.role}
-              </div>
-              <div>Joined: {member.joined}</div>
-              {member.email && <div>{member.email}</div>}
-              <div className="profile-links">
-                {member.links.map((link) => (
-                  <a
-                    key={link.href}
-                    href={link.href.startsWith('/') ? withBasePath(link.href) : link.href}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-              <div className="profile-bio">
-                <Markdown file={member.body} />
-              </div>
-            </div>
-          </section>
-        ))}
-      </div>
+      <TeamList initial={content.team} />
     </div>
   );
 }
 
-export function PublicationsPage() {
+export async function PublicationsPage() {
+  const content = await loadSiteContent();
   return (
     <div className="container page-content publications-page">
-      <Gallery images={publications.gallery} />
-      <div className="publications-sections">
-        {publications.sections.map((section) => (
-          <section key={section.title}>
-            <h2>{section.title}</h2>
-            <PublicationList items={section.items} />
-          </section>
-        ))}
-      </div>
+      <Gallery images={publicationData.gallery} />
+      <PublicationsByYear initial={content.publications} />
     </div>
   );
 }
 
-export function ResourcesPage() {
+export async function ResourcesPage() {
+  const content = await loadSiteContent();
   return (
     <div className="container page-content resources-page">
       <Gallery images={resources.gallery} />
@@ -153,7 +138,11 @@ export function ResourcesPage() {
           </div>
           <div>
             <RuledHeading>{section.title}</RuledHeading>
-            <Markdown file={section.body} />
+            <SiteTextBlock
+              textKey={resourceTextKey(section.id)}
+              initial={content.text}
+              format="markdown"
+            />
           </div>
         </section>
       ))}
@@ -161,16 +150,23 @@ export function ResourcesPage() {
   );
 }
 
-export function RecruitmentPage() {
+export async function RecruitmentPage() {
+  const content = await loadSiteContent();
   return (
     <div className="container page-content">
       <Gallery images={recruitment.gallery} />
       <div className="opportunity-grid">
-        {recruitment.opportunities.map((item) => (
+        {recruitment.opportunities.map((item, index) => (
           <section className="opportunity" key={item.id} tabIndex={0}>
-            <div className="opportunity-front" aria-hidden="true" />
+            <div className="opportunity-front">
+              <SiteImage image={item.image} />
+            </div>
             <div className="opportunity-copy">
-              <Markdown file={item.body} />
+              <SiteTextBlock
+                textKey={recruitmentKeys[index]}
+                initial={content.text}
+                format="markdown"
+              />
             </div>
           </section>
         ))}
@@ -179,22 +175,11 @@ export function RecruitmentPage() {
   );
 }
 
-export function NewsPage() {
-  // CSS masonry follows source reading order across columns rather than down
-  // newspaper columns, so adding one record keeps chronology easy to follow.
+export async function NewsPage() {
+  const content = await loadSiteContent();
   return (
     <>
-      <NewsGrid>
-        {news.map((item) => (
-          <article className="news-card" key={item.id}>
-            <SiteImage image={item.image} eager />
-            <div className="news-caption">
-              <h3>{item.title}</h3>
-              <time>{item.date}</time>
-            </div>
-          </article>
-        ))}
-      </NewsGrid>
+      <NewsList initial={content.news} />
       <a className="load-more" href="https://iyerlaboratory.org/lab-news/">
         Load more
       </a>
@@ -203,22 +188,9 @@ export function NewsPage() {
   );
 }
 
-export function NewsArticle({ slug }: { slug: string }) {
-  const item = news.find((item) => item.slug === slug)!;
-  return (
-    <div className="container page-content article-content news-article">
-      <article>
-        {item.articleImage && (
-          <a href={withBasePath(item.image.src)}>
-            <SiteImage image={item.articleImage} eager />
-          </a>
-        )}
-        <h1>{item.title}</h1>
-        <time>{item.date}</time>
-        {item.body && <Markdown file={item.body} />}
-      </article>
-    </div>
-  );
+export async function NewsArticle({ slug }: { slug: string }) {
+  const content = await loadSiteContent();
+  return <LiveNewsArticle initial={content.news.find((item) => item.slug === slug)!} />;
 }
 
 export function ProtectedResourcesPage() {

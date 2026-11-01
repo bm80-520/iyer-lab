@@ -6,3 +6,8 @@ out/
 .env*
 !.env.example
 *.log
+
+# Content backups (npm run cms:backup)
+backups/
+# Supabase CLI local state
+supabase/.temp/

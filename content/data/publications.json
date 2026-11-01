@@ -57,96 +57,350 @@
       "full": "/images/2024/03/Image20.png"
     }
   ],
-  "sections": [
+  "items": [
     {
-      "title": "Selected Publications",
-      "items": [
-        {
-          "authors": "Gallman, K., Ricemeyer, E., Rastogi A., X. M., **Mendez Scolari, E.,** Duboue, E.R., Rohner, N., **Iyer, H.,** Warren, W.C., Keene, A.C. 2026-05-23 18:46:56.",
-          "title": "A comparative brain atlas of Mexican cavefish identifies naturally-occurring changes in cellular composition and gene expression..",
-          "citation": "*bioRxiv* doi: 10.64898/2026.05.12.723532."
-        },
-        {
-          "authors": "**Mendez Scolari, E., Amanyi,** O.K., Rastogi, A., Duboue, E.R., Keene, A.C., **Iyer, H.** 2026-04-15 10:22:43.",
-          "title": "Evolved differences in microglial cell biology between surface and cave populations of *Astyanax mexicanus*.",
-          "citation": "*bioRxiv* doi: 10.64898/2026.04.11.717796."
-        },
-        {
-          "authors": "**Iyer, H.**, Benoist, C., Bilbo, S.D., Boulanger, L.M., Burton, M.D., Daniels, B.P., Deczkowska, A., Flajnik, M.F., Gareau, M.G., Grace, P.M., Irazoqui, J.E., Reynolds, T.L., Rosi, S., Salinas, I., Schaefer, A., Sokol, C.L., Williams, D.W., and Klein, R.S. 2025-01-30 09:04:59.",
-          "title": "Systems Neuroimmunology: Current Bottlenecks, Research Priorities and Future Directions.",
-          "citation": "*Nat. Immunol.* 2025. 26(3):325-329. doi: 10.1038/s41590-025-02092-z. PMID: 39939753; PMCID: PMC12016954. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/39939753/)\\]"
-        },
-        {
-          "authors": "**Iyer, H.**, Talbot, W.S. 2024-02-02 00:00:00.",
-          "title": "Chloride transporter ClC-7 is essential for phagocytic clearance by microglia.",
-          "citation": "*J. Cell Sci.* 2024. 137(4): jcs261616. doi: 10.1242/jcs.261616. PMID: 38294065; PMCID: PMC10911276. \\[[PDF](/images/2024/03/Iyer_JCS.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/38294065/)\\]"
-        },
-        {
-          "authors": "**Iyer, H.**, Shen, K., Meireles, A.M., Talbot, W.S. 2022-09-02 00:00:00.",
-          "title": "A lysosomal regulatory circuit essential for the development and function of microglia.",
-          "citation": "*Sci. Adv.* 2022. 8(35):eabp8321. doi: 10.1126/sciadv.abp8321. PMID: 36044568; PMCID: PMC9432849. \\[[PDF](/images/2024/03/Iyer_2022_SciAdv-compressed.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/36044568)\\]"
-        },
-        {
-          "authors": "Gan, L., Seki, A., Shen, K., **Iyer, H.**, Han, K., Hayer, A., Wollman, R., Ge, X., Lin, J.R., Dey, G., Talbot, W.S., Meyer, T. 2019-05-21 00:00:00.",
-          "title": "The lysosomal GPCR-like protein regulates Rag and mTORC1 localization and activity.",
-          "citation": "*Nat. Cell Biol.* 2019. 21(5):614-626. doi: 10.1038/s41556-019-0321-6. PMID: 31036939; PMCID: PMC6649673. \\[[PDF](/images/2024/02/Gan_NCB.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/31036939)\\]"
-        },
-        {
-          "authors": "Meireles, A.M., Shen, K., Zoupi, L., **Iyer, H.**, Bouchard, E.L., Williams, A., Talbot, W.S. 2018-11-05 00:00:00.",
-          "title": "The lysosomal transcription factor TFEB regulates myelination downstream of the Rag-Ragulator complex.",
-          "citation": "*Dev. Cell* 2018. 47(3):319-330. doi: 10.1016/j.devcel.2018.10.003. PMID: 30399334; PMCID: PMC6250074. \\[[PDF](/images/2024/02/Meireles_DevCell.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/30399334)\\]"
-        }
-      ]
+      "id": "gallman-2026-biorxiv",
+      "type": "preprint",
+      "selected": true,
+      "date": "2026-05-23",
+      "title": "A comparative brain atlas of Mexican cavefish identifies naturally-occurring changes in cellular composition and gene expression.",
+      "authors": "Gallman, K., Ricemeyer, E., Rastogi A., X. M., **Mendez Scolari, E.,** Duboue, E.R., Rohner, N., **Iyer, H.,** Warren, W.C., Keene, A.C.",
+      "journal": "bioRxiv",
+      "citation": "",
+      "doi": "10.64898/2026.05.12.723532",
+      "pmid": "",
+      "pmcid": "",
+      "url": "",
+      "pubmedUrl": "",
+      "preprintUrl": "https://doi.org/10.64898/2026.05.12.723532",
+      "pdf": "",
+      "image": null,
+      "description": ""
     },
     {
-      "title": "Other Publications",
-      "items": [
-        {
-          "authors": "**Iyer, H.**, Issigonis, M., Sharma, P.P., Extavour, C.G., P.A. Newmark. 2016-06-21 00:00:00.",
-          "title": "A premeiotic function for *boule* in the planarian *Schmidtea mediterranea*.",
-          "citation": "*Proc. Natl. Acad. Sci. U.S.A.* 2016. 113(25): E3509–18. doi: 10.1073/pnas.1521341113. PMID: 27330085; PMCID: PMC4922153. \\[[PDF](/images/2024/03/Iyer_2016_PNAS-compressed.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27330085)\\]"
-        },
-        {
-          "authors": "**Iyer, H.**, Collins III, J.J., P.A. Newmark. 2016-06-15 00:00:00.",
-          "title": "NF-YB regulates spermatogonial stem cell self-renewal and proliferation in the planarian *Schmidtea mediterranea*.",
-          "citation": "*PLoS Genet.* 2016. 12(6): e1006109. doi: 10.1371/journal.pgen.1006109. PMID: 27304889; PMCID: PMC4909293. \\[[PDF](/images/2024/02/Iyer_PLOSGen.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27304889)\\]"
-        },
-        {
-          "authors": "Collins III, J.J., Wendt, G.R., **Iyer, H.**, P. A. Newmark. 2016-03-22 00:00:00.",
-          "title": "Stem cell progeny contribute to the schistosome host-parasite interface.",
-          "citation": "*eLife* 2016. 5:243. doi: 10.7554/eLife.12473. PMID: 27003592; PMCID: PMC4841766. \\[[PDF](/images/2024/02/Collins_eLife.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/27003592/)\\]"
-        },
-        {
-          "authors": "Naik, M., Raichurkar, A., Bandodkar, B.S., Varun, B.V., Bhat, S., Kalkhambkar, R., Murugan, K., Menon, R., Bhat, J., Paul, B., **Iyer, H.**, et al. 2015-01-22 00:00:00.",
-          "title": "Structure Guided Lead Generation for *M. tuberculosis* Thymidylate Kinase (Mtb TMK): Discovery of 3-Cyanopyridone and 1,6-Naphthyridin-2-one as Potent Inhibitors.",
-          "citation": "*J. Med. Chem.* 2015. 58(2): 753-66. doi: 10.1021/jm5012947. PMID: 25486447. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/25486447)\\]"
-        },
-        {
-          "authors": "Balasubramanian, V., Solapure, S., **Iyer, H.**, et al. 2013-11-04 00:00:00.",
-          "title": "Bactericidal activity and mechanism of action of AZD5847, a novel oxazolidinone for treatment of tuberculosis.",
-          "citation": "*Antimicrob. Agents Chemother.* 2014. 58(1): 495-502. doi: 10.1128/AAC.01903-13. PMID: 24189255; PMCID: PMC3910779. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/24189255)\\]"
-        },
-        {
-          "authors": "Collins III, J.J., Wang, B., Lambrus, B.G., Tharp, M., **Iyer, H.**, and P. A. Newmark. 2013-02-28 00:00:00.",
-          "title": "Adult somatic stem cells in the human parasite, *Schistosoma mansoni*.",
-          "citation": "*Nature* 2013. 494: 476-479. doi: 10.1038/nature11924. PMID: 23426263; PMCID: PMC3586782. \\[[PDF](/images/2024/02/Collins_Nature.pdf)\\] \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/23426263)\\]"
-        },
-        {
-          "authors": "Gising, J., Nilsson, M.T., Odell, L.R., Yahiaoui, S., Lindh, M., **Iyer, H.**, et al. 2012-03-22 00:00:00.",
-          "title": "Trisubstituted imidazoles as *Mycobacterium tuberculosis* glutamine synthetase inhibitors.",
-          "citation": "*J. Med. Chem.* 2012. 55(6): 2894-8. doi: 10.1021/jm201212h. PMID: 22369127; PMCID: PMC3381009. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/22369127)\\]"
-        },
-        {
-          "authors": "Andaloussi, M., Lindh, M., Björkelid, C., Suresh, S., Wieckowska, A., **Iyer, H.**, et al. 2011-09-15 00:00:00.",
-          "title": "Substitution of the phosphonic acid and hydroxamic acid functionalities of the DXR inhibitor FR900098: An attempt to improve the activity against *Mycobacterium tuberculosis*.",
-          "citation": "*Bioorg. Med. Chem. Lett.* 2011. 21(18): 5403-7. doi: 10.1016/j.bmcl.2011.07.005. PMID: 21824775. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/21824775)\\]"
-        },
-        {
-          "authors": "Andaloussi, M., Henriksson, L.M., Więckowska, A., Lindh, M., Björkelid, C., Larsson, A.M., Suresh, S., **Iyer, H.**, et al. 2011-07-28 00:00:00.",
-          "title": "Design, synthesis, and X-ray crystallographic studies of α-aryl substituted fosmidomycin analogues as inhibitors of *Mycobacterium tuberculosis* 1-deoxy-D-xylulose 5-phosphate reductoisomerase.",
-          "citation": "*J. Med. Chem.* 2011. 54(14): 4964-76. doi: 10.1021/jm2000085. PMID: 21678907. \\[[Pubmed](https://pubmed.ncbi.nlm.nih.gov/21678907)\\]"
-        }
-      ]
+      "id": "mendez-scolari-2026-biorxiv",
+      "type": "preprint",
+      "selected": true,
+      "date": "2026-04-15",
+      "title": "Evolved differences in microglial cell biology between surface and cave populations of *Astyanax mexicanus*.",
+      "authors": "**Mendez Scolari, E., Amanyi,** O.K., Rastogi, A., Duboue, E.R., Keene, A.C., **Iyer, H.**",
+      "journal": "bioRxiv",
+      "citation": "",
+      "doi": "10.64898/2026.04.11.717796",
+      "pmid": "",
+      "pmcid": "",
+      "url": "",
+      "pubmedUrl": "",
+      "preprintUrl": "https://doi.org/10.64898/2026.04.11.717796",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "iyer-2025-nat-immunol",
+      "type": "article",
+      "selected": true,
+      "date": "2025-01-30",
+      "title": "Systems Neuroimmunology: Current Bottlenecks, Research Priorities and Future Directions.",
+      "authors": "**Iyer, H.**, Benoist, C., Bilbo, S.D., Boulanger, L.M., Burton, M.D., Daniels, B.P., Deczkowska, A., Flajnik, M.F., Gareau, M.G., Grace, P.M., Irazoqui, J.E., Reynolds, T.L., Rosi, S., Salinas, I., Schaefer, A., Sokol, C.L., Williams, D.W., and Klein, R.S.",
+      "journal": "Nat. Immunol.",
+      "citation": "2025. 26(3):325-329.",
+      "doi": "10.1038/s41590-025-02092-z",
+      "pmid": "39939753",
+      "pmcid": "PMC12016954",
+      "url": "https://doi.org/10.1038/s41590-025-02092-z",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/39939753/",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "iyer-2024-jcs",
+      "type": "article",
+      "selected": true,
+      "date": "2024-02-02",
+      "title": "Chloride transporter ClC-7 is essential for phagocytic clearance by microglia.",
+      "authors": "**Iyer, H.**, Talbot, W.S.",
+      "journal": "J. Cell Sci.",
+      "citation": "2024. 137(4): jcs261616.",
+      "doi": "10.1242/jcs.261616",
+      "pmid": "38294065",
+      "pmcid": "PMC10911276",
+      "url": "https://doi.org/10.1242/jcs.261616",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/38294065/",
+      "preprintUrl": "",
+      "pdf": "/images/2024/03/Iyer_JCS.pdf",
+      "image": {
+        "src": "/images/publications/iyer-2024-jcs.jpg",
+        "alt": "Figure 1 from the paper: reduced neutral red staining in clcn7 and ostm1 mutants.",
+        "width": 756,
+        "height": 900
+      },
+      "description": ""
+    },
+    {
+      "id": "iyer-2022-sci-adv",
+      "type": "article",
+      "selected": true,
+      "date": "2022-09-02",
+      "title": "A lysosomal regulatory circuit essential for the development and function of microglia.",
+      "authors": "**Iyer, H.**, Shen, K., Meireles, A.M., Talbot, W.S.",
+      "journal": "Sci. Adv.",
+      "citation": "2022. 8(35):eabp8321.",
+      "doi": "10.1126/sciadv.abp8321",
+      "pmid": "36044568",
+      "pmcid": "PMC9432849",
+      "url": "https://doi.org/10.1126/sciadv.abp8321",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/36044568",
+      "preprintUrl": "",
+      "pdf": "/images/2024/03/Iyer_2022_SciAdv-compressed.pdf",
+      "image": {
+        "src": "/images/publications/iyer-2022-sci-adv.jpg",
+        "alt": "Figure 1 from the paper: defective macrophages in rraga mutants fail to colonize the brain.",
+        "width": 710,
+        "height": 900
+      },
+      "description": ""
+    },
+    {
+      "id": "gan-2019-nat-cell-biol",
+      "type": "article",
+      "selected": true,
+      "date": "2019-05-21",
+      "title": "The lysosomal GPCR-like protein regulates Rag and mTORC1 localization and activity.",
+      "authors": "Gan, L., Seki, A., Shen, K., **Iyer, H.**, Han, K., Hayer, A., Wollman, R., Ge, X., Lin, J.R., Dey, G., Talbot, W.S., Meyer, T.",
+      "journal": "Nat. Cell Biol.",
+      "citation": "2019. 21(5):614-626.",
+      "doi": "10.1038/s41556-019-0321-6",
+      "pmid": "31036939",
+      "pmcid": "PMC6649673",
+      "url": "https://doi.org/10.1038/s41556-019-0321-6",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/31036939",
+      "preprintUrl": "",
+      "pdf": "/images/2024/02/Gan_NCB.pdf",
+      "image": {
+        "src": "/images/publications/gan-2019-nat-cell-biol.jpg",
+        "alt": "Microscopy panels from Figure 1 of the paper: a genome-wide siRNA screen in human primary fibroblasts identifies candidate regulators of amino acid-stimulated mTORC1 translocation and activation.",
+        "width": 766,
+        "height": 767
+      },
+      "description": ""
+    },
+    {
+      "id": "meireles-2018-dev-cell",
+      "type": "article",
+      "selected": true,
+      "date": "2018-11-05",
+      "title": "The lysosomal transcription factor TFEB regulates myelination downstream of the Rag-Ragulator complex.",
+      "authors": "Meireles, A.M., Shen, K., Zoupi, L., **Iyer, H.**, Bouchard, E.L., Williams, A., Talbot, W.S.",
+      "journal": "Dev. Cell",
+      "citation": "2018. 47(3):319-330.",
+      "doi": "10.1016/j.devcel.2018.10.003",
+      "pmid": "30399334",
+      "pmcid": "PMC6250074",
+      "url": "https://doi.org/10.1016/j.devcel.2018.10.003",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/30399334",
+      "preprintUrl": "",
+      "pdf": "/images/2024/02/Meireles_DevCell.pdf",
+      "image": {
+        "src": "/images/publications/meireles-2018-dev-cell.jpg",
+        "alt": "Graphical abstract: RagA inhibits Tfeb, which inhibits myelination. Spinal cord diagrams show reduced myelination in rraga mutants, rescued myelination in rraga;tfeb double mutants, and ectopic myelination in tfeb mutants.",
+        "width": 596,
+        "height": 596
+      },
+      "description": ""
+    },
+    {
+      "id": "iyer-2016-pnas",
+      "type": "article",
+      "selected": false,
+      "date": "2016-06-21",
+      "title": "A premeiotic function for *boule* in the planarian *Schmidtea mediterranea*.",
+      "authors": "**Iyer, H.**, Issigonis, M., Sharma, P.P., Extavour, C.G., P.A. Newmark.",
+      "journal": "Proc. Natl. Acad. Sci. U.S.A.",
+      "citation": "2016. 113(25): E3509–18.",
+      "doi": "10.1073/pnas.1521341113",
+      "pmid": "27330085",
+      "pmcid": "PMC4922153",
+      "url": "https://doi.org/10.1073/pnas.1521341113",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/27330085",
+      "preprintUrl": "",
+      "pdf": "/images/2024/03/Iyer_2016_PNAS-compressed.pdf",
+      "image": {
+        "src": "/images/publications/iyer-2016-pnas.jpg",
+        "alt": "Figure 1 from the paper: planarian boule1 and boule2 perform different functions in spermatogenesis.",
+        "width": 900,
+        "height": 667
+      },
+      "description": ""
+    },
+    {
+      "id": "iyer-2016-plos-genet",
+      "type": "article",
+      "selected": false,
+      "date": "2016-06-15",
+      "title": "NF-YB regulates spermatogonial stem cell self-renewal and proliferation in the planarian *Schmidtea mediterranea*.",
+      "authors": "**Iyer, H.**, Collins III, J.J., P.A. Newmark.",
+      "journal": "PLoS Genet.",
+      "citation": "2016. 12(6): e1006109.",
+      "doi": "10.1371/journal.pgen.1006109",
+      "pmid": "27304889",
+      "pmcid": "PMC4909293",
+      "url": "https://doi.org/10.1371/journal.pgen.1006109",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/27304889",
+      "preprintUrl": "",
+      "pdf": "/images/2024/02/Iyer_PLOSGen.pdf",
+      "image": {
+        "src": "/images/publications/iyer-2016-plos-genet.jpg",
+        "alt": "Figure 1 from the paper: NF-YB(RNAi) results in progressive loss of male germ cells in S. mediterranea starting from the stem cell population.",
+        "width": 676,
+        "height": 900
+      },
+      "description": ""
+    },
+    {
+      "id": "collins-2016-elife",
+      "type": "article",
+      "selected": false,
+      "date": "2016-03-22",
+      "title": "Stem cell progeny contribute to the schistosome host-parasite interface.",
+      "authors": "Collins III, J.J., Wendt, G.R., **Iyer, H.**, P. A. Newmark.",
+      "journal": "eLife",
+      "citation": "2016. 5:243.",
+      "doi": "10.7554/eLife.12473",
+      "pmid": "27003592",
+      "pmcid": "PMC4841766",
+      "url": "https://doi.org/10.7554/eLife.12473",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/27003592/",
+      "preprintUrl": "",
+      "pdf": "/images/2024/02/Collins_eLife.pdf",
+      "image": {
+        "src": "/images/publications/collins-2016-elife.jpg",
+        "alt": "Figure 1 from the paper: identification of genes down-regulated after long-term stem cell depletion.",
+        "width": 900,
+        "height": 762
+      },
+      "description": ""
+    },
+    {
+      "id": "naik-2015-j-med-chem",
+      "type": "article",
+      "selected": false,
+      "date": "2015-01-22",
+      "title": "Structure Guided Lead Generation for *M. tuberculosis* Thymidylate Kinase (Mtb TMK): Discovery of 3-Cyanopyridone and 1,6-Naphthyridin-2-one as Potent Inhibitors.",
+      "authors": "Naik, M., Raichurkar, A., Bandodkar, B.S., Varun, B.V., Bhat, S., Kalkhambkar, R., Murugan, K., Menon, R., Bhat, J., Paul, B., **Iyer, H.**, et al.",
+      "journal": "J. Med. Chem.",
+      "citation": "2015. 58(2): 753-66.",
+      "doi": "10.1021/jm5012947",
+      "pmid": "25486447",
+      "pmcid": "",
+      "url": "https://doi.org/10.1021/jm5012947",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/25486447",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "balasubramanian-2014-aac",
+      "type": "article",
+      "selected": false,
+      "date": "2013-11-04",
+      "title": "Bactericidal activity and mechanism of action of AZD5847, a novel oxazolidinone for treatment of tuberculosis.",
+      "authors": "Balasubramanian, V., Solapure, S., **Iyer, H.**, et al.",
+      "journal": "Antimicrob. Agents Chemother.",
+      "citation": "2014. 58(1): 495-502.",
+      "doi": "10.1128/AAC.01903-13",
+      "pmid": "24189255",
+      "pmcid": "PMC3910779",
+      "url": "https://doi.org/10.1128/AAC.01903-13",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/24189255",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "collins-2013-nature",
+      "type": "article",
+      "selected": false,
+      "date": "2013-02-28",
+      "title": "Adult somatic stem cells in the human parasite, *Schistosoma mansoni*.",
+      "authors": "Collins III, J.J., Wang, B., Lambrus, B.G., Tharp, M., **Iyer, H.**, and P. A. Newmark.",
+      "journal": "Nature",
+      "citation": "2013. 494: 476-479.",
+      "doi": "10.1038/nature11924",
+      "pmid": "23426263",
+      "pmcid": "PMC3586782",
+      "url": "https://doi.org/10.1038/nature11924",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/23426263",
+      "preprintUrl": "",
+      "pdf": "/images/2024/02/Collins_Nature.pdf",
+      "image": {
+        "src": "/images/publications/collins-2013-nature.jpg",
+        "alt": "Figure 1 from the paper: proliferation of somatic cells in adult schistosomes.",
+        "width": 694,
+        "height": 900
+      },
+      "description": ""
+    },
+    {
+      "id": "gising-2012-j-med-chem",
+      "type": "article",
+      "selected": false,
+      "date": "2012-03-22",
+      "title": "Trisubstituted imidazoles as *Mycobacterium tuberculosis* glutamine synthetase inhibitors.",
+      "authors": "Gising, J., Nilsson, M.T., Odell, L.R., Yahiaoui, S., Lindh, M., **Iyer, H.**, et al.",
+      "journal": "J. Med. Chem.",
+      "citation": "2012. 55(6): 2894-8.",
+      "doi": "10.1021/jm201212h",
+      "pmid": "22369127",
+      "pmcid": "PMC3381009",
+      "url": "https://doi.org/10.1021/jm201212h",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/22369127",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "andaloussi-2011-bmcl",
+      "type": "article",
+      "selected": false,
+      "date": "2011-09-15",
+      "title": "Substitution of the phosphonic acid and hydroxamic acid functionalities of the DXR inhibitor FR900098: An attempt to improve the activity against *Mycobacterium tuberculosis*.",
+      "authors": "Andaloussi, M., Lindh, M., Björkelid, C., Suresh, S., Wieckowska, A., **Iyer, H.**, et al.",
+      "journal": "Bioorg. Med. Chem. Lett.",
+      "citation": "2011. 21(18): 5403-7.",
+      "doi": "10.1016/j.bmcl.2011.07.005",
+      "pmid": "21824775",
+      "pmcid": "",
+      "url": "https://doi.org/10.1016/j.bmcl.2011.07.005",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/21824775",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
+    },
+    {
+      "id": "andaloussi-2011-j-med-chem",
+      "type": "article",
+      "selected": false,
+      "date": "2011-07-28",
+      "title": "Design, synthesis, and X-ray crystallographic studies of α-aryl substituted fosmidomycin analogues as inhibitors of *Mycobacterium tuberculosis* 1-deoxy-D-xylulose 5-phosphate reductoisomerase.",
+      "authors": "Andaloussi, M., Henriksson, L.M., Więckowska, A., Lindh, M., Björkelid, C., Larsson, A.M., Suresh, S., **Iyer, H.**, et al.",
+      "journal": "J. Med. Chem.",
+      "citation": "2011. 54(14): 4964-76.",
+      "doi": "10.1021/jm2000085",
+      "pmid": "21678907",
+      "pmcid": "",
+      "url": "https://doi.org/10.1021/jm2000085",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/21678907",
+      "preprintUrl": "",
+      "pdf": "",
+      "image": null,
+      "description": ""
     }
   ]
 }

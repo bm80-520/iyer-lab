@@ -27,4 +27,10 @@
   --column-gap: 6%;
   --header-height: 88px;
   --image-shadow: 0 4px 8px rgb(0 0 0 / 20%), 0 6px 20px rgb(0 0 0 / 19%);
+  /* Hover feedback: clickable figures rest slightly desaturated and return to
+     full colour; links and controls fade between their two colours. */
+  --transition: 200ms ease;
+  --image-rest-filter: saturate(0.8);
+  /* Keeps in-page link targets clear of the fixed header. */
+  --anchor-offset: calc(var(--header-height) + 20px);
 }

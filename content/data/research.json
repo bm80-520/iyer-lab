@@ -64,6 +64,45 @@
       "full": "/images/2024/03/Image8c.png"
     }
   ],
+  "overview": {
+    "title": "Why we are captivated by microglia",
+    "image": {
+      "src": "/images/2024/01/Primer-1030x572.jpeg",
+      "alt": "",
+      "width": 1030,
+      "height": 572
+    },
+    "body": "text/research/1.md",
+    "link": {
+      "label": "Read our Primer",
+      "href": "/research/primer/"
+    }
+  },
+  "topicsTitle": "Research Topics",
+  "topics": [
+    {
+      "id": "lysosomal-biology",
+      "title": "Lysosomal Biology",
+      "projects": "lysosomal-projects",
+      "image": {
+        "src": "/images/2024/01/Lysosome-scaled-e1709561576850-705x391.jpeg",
+        "alt": "",
+        "width": 705,
+        "height": 391
+      }
+    },
+    {
+      "id": "microglia-and-brain-disorders",
+      "title": "Microglia and Brain Disorders",
+      "projects": "microglia-and-brain-disorders",
+      "image": {
+        "src": "/images/2024/01/Microglia-and-brain-disorders-scaled-e1709561534850-705x391.jpeg",
+        "alt": "",
+        "width": 705,
+        "height": 391
+      }
+    }
+  ],
   "items": [
     {
       "id": "research-1",
@@ -92,7 +131,7 @@
       "body": "text/research/2.md",
       "link": {
         "label": "Learn More",
-        "href": "/research/lysosomal-projects/"
+        "href": "/research/#lysosomal-biology"
       }
     },
     {
@@ -107,7 +146,7 @@
       "body": "text/research/3.md",
       "link": {
         "label": "Learn More",
-        "href": "/research/microglia-and-brain-disorders/"
+        "href": "/research/#microglia-and-brain-disorders"
       }
     }
   ]
