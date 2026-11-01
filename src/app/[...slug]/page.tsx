@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { pages } from '@/lib/content';
+import { getPages } from '@/lib/content';
 import {
   ResearchPage,
-  ProjectPage,
   PrimerPage,
   TeamPage,
   PublicationsPage,
@@ -16,12 +15,14 @@ import {
 
 type Props = { params: Promise<{ slug: string[] }> };
 export const dynamicParams = false;
-export function generateStaticParams() {
-  return pages.filter((page) => page.slug).map((page) => ({ slug: page.slug.split('/') }));
+export async function generateStaticParams() {
+  return (await getPages())
+    .filter((page) => page.slug)
+    .map((page) => ({ slug: page.slug.split('/') }));
 }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  return { title: pages.find((page) => page.slug === slug.join('/'))?.title };
+  return { title: (await getPages()).find((page) => page.slug === slug.join('/'))?.title };
 }
 export default async function ContentPage({ params }: Props) {
   const { slug } = await params;
@@ -31,10 +32,6 @@ export default async function ContentPage({ params }: Props) {
       return <ResearchPage />;
     case 'research/primer':
       return <PrimerPage />;
-    case 'research/lysosomal-projects':
-      return <ProjectPage kind="lysosomal" />;
-    case 'research/microglia-and-brain-disorders':
-      return <ProjectPage kind="disorders" />;
     case 'team':
       return <TeamPage />;
     case 'publications':
@@ -48,7 +45,7 @@ export default async function ContentPage({ params }: Props) {
     case 'iyer-lab-resources':
       return <ProtectedResourcesPage />;
     default:
-      if (pages.some((page) => page.slug === route && page.kind === 'news'))
+      if ((await getPages()).some((page) => page.slug === route && page.kind === 'news'))
         return <NewsArticle slug={route} />;
   }
   notFound();

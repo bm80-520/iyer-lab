@@ -2,33 +2,29 @@
   "items": [
     {
       "id": "research/lysosomal-projects-1",
+      "anchor": "stress-signals-and-lysosomes",
+      "navLabel": "Stress signals and lysosomes",
       "title": "How are signals of extracellular stress relayed to lysosomes?",
       "image": {
         "src": "/images/2024/02/lysosomal-p1-1030x721.png",
-        "alt": "",
+        "alt": "Diagram: preliminary data show that Tfeb and Tfe3 only activate lysosomal signaling in response to cellular stress in microglia and macrophages. A genome-wide CRISPR screen in macrophages challenged with synaptosomes, myelin debris, or misfolded proteins aims to uncover upstream activators of lysosomal and endosomal biogenesis.",
         "width": 1030,
         "height": 721
       },
-      "body": "text/research/lysosomal-projects/1.md",
-      "link": {
-        "label": "Learn More",
-        "href": "https://iyerlaboratory.org/research/how-are-signals-of-extracellular-stress-relayed/"
-      }
+      "body": "text/research/lysosomal-projects/1.md"
     },
     {
       "id": "research/lysosomal-projects-2",
+      "anchor": "professional-phagocytes",
+      "navLabel": "Professional and non-professional phagocytes",
       "title": "What are the key molecular differences in the endolysosomal pathway between professional and non-professional phagocytic cells?",
       "image": {
         "src": "/images/2024/01/lysosomal-p2-1030x721.png",
-        "alt": "",
+        "alt": "Diagram comparing professional phagocytic cells (monocytes, macrophages, microglia, and dendritic cells) with non-professional phagocytic cells (epithelial cells, fibroblasts, and endothelial cells): phagocytic potential in development and aging, signals that confer phagocytic capacity and plasticity, endolysosomal pathway components, and cell death by phagocytosis.",
         "width": 1030,
         "height": 721
       },
-      "body": "text/research/lysosomal-projects/2.md",
-      "link": {
-        "label": "Learn More",
-        "href": "https://iyerlaboratory.org/research/key-molecular-differences-in-the-endolysosomal-pathway/"
-      }
+      "body": "text/research/lysosomal-projects/2.md"
     }
   ]
 }

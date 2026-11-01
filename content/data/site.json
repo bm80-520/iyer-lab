@@ -75,7 +75,7 @@
       "Houston, TX 77005",
       "(713) 348-3062"
     ],
-    "copyright": "© Copyright Iyer Lab. Logo art by [Ellen Bouchard](https://www.linkedin.com/in/ellen-bouchard?trk=public_post_follow-view-profile). Site by [Academic Web Pages](https://www.academicwebpages.com)",
+    "copyright": "© Copyright Iyer Lab. Logo art by [Ellen Bouchard](https://www.linkedin.com/in/ellen-bouchard?trk=public_post_follow-view-profile).",
     "linksInternal": [
       {
         "label": "Iyer Lab Internal",
@@ -83,7 +83,7 @@
       },
       {
         "label": "Login",
-        "href": "https://iyerlaboratory.org/wp-login.php"
+        "href": "/login/"
       }
     ]
   }

@@ -60,18 +60,42 @@
   "opportunities": [
     {
       "id": "opportunity-1",
+      "image": {
+        "src": "/images/2024/03/Lab-tech-1.png",
+        "alt": "Lab technician",
+        "width": 750,
+        "height": 748
+      },
       "body": "text/opportunities/1.md"
     },
     {
       "id": "opportunity-2",
+      "image": {
+        "src": "/images/2024/03/Undergraduate-students-1.png",
+        "alt": "Undergraduate students",
+        "width": 750,
+        "height": 748
+      },
       "body": "text/opportunities/2.md"
     },
     {
       "id": "opportunity-3",
+      "image": {
+        "src": "/images/2024/03/Graduate-students-1.png",
+        "alt": "Graduate students",
+        "width": 750,
+        "height": 750
+      },
       "body": "text/opportunities/3.md"
     },
     {
       "id": "opportunity-4",
+      "image": {
+        "src": "/images/2024/03/Postdoctoral-fellows-1.png",
+        "alt": "Postdoctoral Fellows",
+        "width": 750,
+        "height": 750
+      },
       "body": "text/opportunities/4.md"
     }
   ]

@@ -2,7 +2,9 @@
 
 A Next.js static website preserving the main branch's original wording, images,
 typography, and layouts. Shared React layouts and semantic CSS replace the
-WordPress presentation. Routine content updates use Markdown and JSON data.
+WordPress presentation. Publications, team members, lab news, research areas,
+page text and uploaded files are managed in a private dashboard (`/admin/`)
+backed by Supabase; see [the content-management guide](docs/CMS.md).
 
 ## Run locally
 
@@ -15,12 +17,15 @@ npm run dev
 
 ## Maintain the website
 
-Read [the editing guide](docs/EDITING.md) for content updates, images, shared
-styling, and examples. Start with these locations:
+Routine content changes happen in the dashboard ([docs/CMS.md](docs/CMS.md):
+setup, everyday use, backups). Read [the editing guide](docs/EDITING.md) for
+the site's fixed structure, images, and styling. Start with these locations:
 
 ```text
-content/data/     Navigation, team, publications, research, resources, and news
+content/data/     Navigation, page structure, image strips; original content for the import
 content/text/     Markdown paragraphs and headings, referenced by the data
+supabase/         Database schema, access policies, storage buckets (migrations)
+src/lib/cms/      Supabase client, queries, and the dashboard's data layer
 src/styles/       Readable CSS: theme, typography, layout, media, page patterns
 src/components/   Shared header/footer, content layouts, gallery, and slideshow
 public/images/    Original Rice branding, photographs, illustrations, and PDFs
@@ -39,6 +44,7 @@ npm run typecheck
 npm run build
 npm run check:export
 npm run preview
+npm run cms:check      # access rules, against the Supabase project in .env.local
 ```
 
 The export validator checks page links, responsive images, forms, fonts, and CSS
@@ -61,6 +67,15 @@ NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run build
 NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run check:export
 NEXT_PUBLIC_BASE_PATH=/iyer-lab npm run preview
 ```
+
+The build reads published content from Supabase when the repository variables
+`NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` are set
+(Settings → Secrets and variables → Actions → Variables), and rebuilds nightly.
+Dashboard edits do not need a rebuild: pages load the latest published content
+in the browser. Without those variables, the build uses the files in `content/`.
+
+The site icon (`src/app/icon.svg`, `favicon.ico`, `apple-icon.png`) is the
+emblem from the lab banner.
 
 The protected resources form uses the existing WordPress authentication endpoint;
 protected content is not stored in the static export. “Load more” opens the live

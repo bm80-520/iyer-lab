@@ -1,28 +1,37 @@
 # Editing the Iyer Lab website
 
-Ordinary updates need only a text editor. Content lives in `content/`; appearance
-lives in `src/styles/`. Reference screenshots remain in `docs/ui-verification/`.
+**Publications, team members, lab news, research areas, page text, and uploaded
+images are edited in the website's dashboard, not here.** See [CMS.md](CMS.md).
+This guide covers what stays in the repository: the site's structure, fixed
+images, and styling. Content lives in `content/`; appearance lives in
+`src/styles/`. Reference screenshots remain in `docs/ui-verification/`.
 The original downloaded site and migration tooling are recoverable from Git
 history before their removal; ordinary editing uses only the current content.
 
 ## Find the right file
 
-| Change                                                    | File                                              |
-| --------------------------------------------------------- | ------------------------------------------------- |
-| Navigation, lab banners, footer links/address, Rice logos | `content/data/site.json`                          |
-| Homepage slides and research card images                  | `content/data/home.json`                          |
-| Research overview and its image strip                     | `content/data/research.json`                      |
-| Lysosomal projects                                        | `content/data/lysosomal-projects.json`            |
-| Microglia and brain disorders projects                    | `content/data/microglia-and-brain-disorders.json` |
-| Primer sections and image order                           | `content/data/primer.json`                        |
-| Team members and team image strip                         | `content/data/team.json`                          |
-| Publications and publication image strip                  | `content/data/publications.json`                  |
-| Resource sections and image strip                         | `content/data/resources.json`                     |
-| Recruitment notices and image strip                       | `content/data/recruitment.json`                   |
-| News cards and articles                                   | `content/data/news.json`                          |
-| Password form wording and live-site destination           | `content/data/protected-resources.json`           |
+| Change                                            | File                                         |
+| ------------------------------------------------- | -------------------------------------------- |
+| Navigation, lab banners, footer links, Rice logos | `content/data/site.json`                     |
+| Homepage slides and research card images          | `content/data/home.json`                     |
+| Research overview image and image strip           | `content/data/research.json`                 |
+| Primer sections and image order                   | `content/data/primer.json`                   |
+| Team page image strip                             | `content/data/team.json` (`gallery`)         |
+| Publications page image strip                     | `content/data/publications.json` (`gallery`) |
+| Resource section titles, images and image strip   | `content/data/resources.json`                |
+| Recruitment card images and image strip           | `content/data/recruitment.json`              |
+| Password form wording and live-site destination   | `content/data/protected-resources.json`      |
 
-Each `body` field points to a Markdown file under `content/text/`. That file
+The dashboard manages the publications, team members, news, research topics
+and projects, the Research introduction, the recruitment and Resources text,
+and the footer contact details. Their records in `content/data/` and
+`content/text/` (`publications.json`, `team.json` members, `news.json`,
+`lysosomal-projects.json`, `microglia-and-brain-disorders.json`, and the
+matching Markdown) are the original content: `npm run cms:import` copied them
+into Supabase, and a checkout without Supabase settings builds from them. Once
+the website is connected to Supabase, editing them no longer changes the site.
+
+Each remaining `body` field (the Primer) points to a Markdown file under `content/text/`. That file
 contains the paragraphs and headings. Shared React layouts supply the columns,
 image placement, header, footer, and interactive controls.
 
@@ -45,36 +54,11 @@ Changes to paragraph or heading styling belong in the shared CSS.
 The original site uses visible H2 headings for research sections and an H1 for
 news article titles. Those levels are retained in the templates and Markdown.
 
-## Update a team member
-
-Edit the member in `content/data/team.json`. Name, role, joining month, email,
-links, photograph, and biography are separate fields. Edit their Markdown
-biography under `content/text/team/`. To add someone, copy an existing member
-record, give it a unique `id`, and point `body` at a new Markdown file.
-
-## Update publications
-
-Edit `content/data/publications.json`. Each publication has `authors`, `title`,
-and `citation`, with Markdown emphasis and links supported in each field.
-The homepage displays the first three selected publications from this same list;
-there is no second homepage bibliography to keep in sync. Homepage resource links
-also come from the resource sections, so their titles are edited only once.
-
-## Add news
-
-Copy an existing item in `content/data/news.json`. Give it a unique `id`, title,
-date, image, and destination. A local article also needs `slug`, `articleImage`,
-and `body`. Set `href` to `/<slug>/` and create the Markdown file named by `body`.
-The article route is generated from the record automatically. List order is
-reading order, so put a new story first.
-
-The data retains original story destinations, and local article routes can be
-opened directly. Cards remain static to match the original site's presentation.
-The “Load more” link opens the live news archive.
-
 ## Change images
 
-Put images and PDFs in `public/images/`, preferably grouped by year/month.
+Images for publications, news, team profiles and research are uploaded in the
+dashboard's Media Library. For the fixed images listed above, put images and
+PDFs in `public/images/`, preferably grouped by year/month.
 Use a path such as `/images/2026/05/photo.jpg` in a data file. Keep meaningful
 `alt` text. `width` and `height`, when present, describe the image's actual pixel
 dimensions and prevent movement while it loads. A gallery image's `full` field
@@ -93,11 +77,18 @@ The original Rice University logos and campus photograph are configured once in
 | `src/styles/layout.css`  | Header, navigation, banners, footer, and overall page geometry                         |
 | `src/styles/media.css`   | Slideshow, galleries, image controls, and lightbox                                     |
 | `src/styles/content.css` | Repeated research/profile/resource/publication/news layouts                            |
+| `src/styles/admin.css`   | Login page and dashboard only; never part of the public CSS                            |
 
-`src/app/globals.css` imports these files once. For example, change
+`src/app/globals.css` imports these files once (except `admin.css`, which the
+dashboard imports itself). For example, change
 `--heading-2-size` in `theme.css` to resize H2 headings everywhere, or change
 `--paragraph-space` to adjust paragraph margins. Edit the semantic layout rule
 when changing one pattern, such as `.team-profile` or `.research-row`.
+
+Hover feedback uses three theme settings: `--transition` (200 ms),
+`--image-rest-filter` (clickable figures rest slightly desaturated and return
+to full colour on hover), and `--anchor-offset` (keeps jump-link targets clear
+of the fixed header).
 
 Responsive rules are grouped at the ends of their CSS files. The original
 breakpoints are 767px for content layouts, 799px for profiles/project columns,

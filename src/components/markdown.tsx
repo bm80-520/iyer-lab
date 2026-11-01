@@ -1,4 +1,6 @@
-import { getMarkdown, renderMarkdown } from '@/lib/content';
+import { getMarkdown } from '@/lib/content';
+
+export { InlineMarkdown } from './markdown-text';
 
 export async function Markdown({ file, className = '' }: { file: string; className?: string }) {
   return (
@@ -7,8 +9,4 @@ export async function Markdown({ file, className = '' }: { file: string; classNa
       dangerouslySetInnerHTML={{ __html: await getMarkdown(file) }}
     />
   );
-}
-
-export function InlineMarkdown({ children }: { children: string }) {
-  return <span dangerouslySetInnerHTML={{ __html: renderMarkdown(children, true) }} />;
 }
