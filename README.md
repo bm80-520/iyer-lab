@@ -77,6 +77,5 @@ in the browser. Without those variables, the build uses the files in `content/`.
 The site icon (`src/app/icon.svg`, `favicon.ico`, `apple-icon.png`) is the
 emblem from the lab banner.
 
-The protected resources form uses the existing WordPress authentication endpoint;
-protected content is not stored in the static export. “Load more” opens the live
-news archive for older entries absent from the downloaded source.
+“Load more” on Lab News opens the live news archive for older entries absent
+from the downloaded source.

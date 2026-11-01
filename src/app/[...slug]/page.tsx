@@ -10,7 +10,6 @@ import {
   RecruitmentPage,
   NewsPage,
   NewsArticle,
-  ProtectedResourcesPage,
 } from '@/components/site-pages';
 
 type Props = { params: Promise<{ slug: string[] }> };
@@ -42,8 +41,6 @@ export default async function ContentPage({ params }: Props) {
       return <RecruitmentPage />;
     case 'lab-news':
       return <NewsPage />;
-    case 'iyer-lab-resources':
-      return <ProtectedResourcesPage />;
     default:
       if ((await getPages()).some((page) => page.slug === route && page.kind === 'news'))
         return <NewsArticle slug={route} />;

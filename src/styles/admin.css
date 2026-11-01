@@ -24,7 +24,7 @@
   font-size: 14px;
 }
 
-/* Shared form controls, matching the protected-resources password field. */
+/* Shared form controls, matching the site's original password field. */
 .login-form input,
 .admin-page input:not([type='checkbox']):not([type='file']),
 .admin-page select,
