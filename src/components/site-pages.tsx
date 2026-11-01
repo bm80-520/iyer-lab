@@ -6,7 +6,6 @@ import team from '../../content/data/team.json';
 import publicationData from '../../content/data/publications.json';
 import resources from '../../content/data/resources.json';
 import recruitment from '../../content/data/recruitment.json';
-import protectedResources from '../../content/data/protected-resources.json';
 import { loadSiteContent } from '@/lib/cms/snapshot';
 import { recruitmentKeys, resourceTextKey } from '@/lib/cms/site-text';
 import { Gallery } from './gallery';
@@ -191,22 +190,4 @@ export async function NewsPage() {
 export async function NewsArticle({ slug }: { slug: string }) {
   const content = await loadSiteContent();
   return <LiveNewsArticle initial={content.news.find((item) => item.slug === slug)!} />;
-}
-
-export function ProtectedResourcesPage() {
-  return (
-    <div className="container page-content protected-resources">
-      <form action={protectedResources.action} method="post">
-        <input type="hidden" name="redirect_to" value={protectedResources.redirect} />
-        <p>{protectedResources.notice}</p>
-        <p>
-          <label>
-            {protectedResources.passwordLabel}{' '}
-            <input type="password" name="post_password" required />
-          </label>
-          <input type="submit" value={protectedResources.submitLabel} />
-        </p>
-      </form>
-    </div>
-  );
 }

@@ -653,36 +653,6 @@
   color: var(--color-muted);
   font-size: 12.15px;
 }
-.protected-resources form {
-  margin: 0 0 23px;
-}
-.protected-resources label {
-  display: block;
-  font-size: 13.8px;
-}
-.protected-resources input[type='password'] {
-  display: block;
-  border: 1px solid var(--color-border);
-  background: #f8f8f8;
-  border-radius: 2px;
-  padding: 8px;
-  font-size: 13.8px;
-  line-height: 19px;
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-.protected-resources input[type='submit'] {
-  background: var(--color-heading);
-  color: white;
-  border: 0;
-  padding: 9px 22px;
-  font:
-    13.3333px/15px Arial,
-    sans-serif;
-  cursor: pointer;
-}
-
 @media (min-width: 768px) and (max-width: 989px) {
   .news-grid {
     --news-columns: 3;

@@ -20,7 +20,6 @@ history before their removal; ordinary editing uses only the current content.
 | Publications page image strip                     | `content/data/publications.json` (`gallery`) |
 | Resource section titles, images and image strip   | `content/data/resources.json`                |
 | Recruitment card images and image strip           | `content/data/recruitment.json`              |
-| Password form wording and live-site destination   | `content/data/protected-resources.json`      |
 
 The dashboard manages the publications, team members, news, research topics
 and projects, the Research introduction, the recruitment and Resources text,
